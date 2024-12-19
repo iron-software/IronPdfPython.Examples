@@ -1,0 +1,9 @@
+[project]
+name = "Html To Pdf"
+version = "1.0.0"
+description = "Code examples demonstrating IronPDF for Python Feature: Html To Pdf"
+license = { file = "LICENSE" }
+readme = "README.md"
+homepage = "https://github.com/iron-software/IronPdfPython.Examples"
+keywords = ["IronPDF for Python", "python", "Html To Pdf", "ironpdfpython.examples", "Tutorial"]
+dependencies = ["ironpdf==2024.11.1.4"]

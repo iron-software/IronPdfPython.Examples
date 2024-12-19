@@ -1,7 +1,7 @@
 ***Based on <https://ironpdf.com/examples/image-to-pdf/>***
 
-The `ImageToPdfConverter` class is designed to generate PDF documents from images.
+The `ImageToPdfConverter` class is designed to generate PDF documents from image files.
 
-To create a PDF document from a single image, use the `ImageToPdfConverter.ImageToPdf` method, providing a correct file path to the image.
+Utilize the `ImageToPdfConverter.ImageToPdf` method with a specific image file path to create a PDF document from that particular image.
 
-If you need to create a PDF document from multiple images, use the `ImageToPdfConverter.ImageToPdf` method with an array of image paths. This will compile all the images into one PDF file, with each image placed on a distinct page.
+When you use the `ImageToPdfConverter.ImageToPdf` method with an array of image paths, it will compile a single PDF document where each image is placed on a different page.

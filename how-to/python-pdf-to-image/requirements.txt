@@ -1,0 +1,2 @@
+# IronPDF for Python
+ironpdf==2024.11.1.4

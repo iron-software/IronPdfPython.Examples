@@ -1,0 +1,9 @@
+[project]
+name = "Python Fill Pdf Form"
+version = "1.0.0"
+description = "Code examples demonstrating IronPDF for Python Feature: Python Fill Pdf Form"
+license = { file = "LICENSE" }
+readme = "README.md"
+homepage = "https://github.com/iron-software/IronPdfPython.Examples"
+keywords = ["IronPDF for Python", "python", "Python Fill Pdf Form", "ironpdfpython.examples", "How-To"]
+dependencies = ["ironpdf==2024.11.1.4"]

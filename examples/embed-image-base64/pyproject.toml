@@ -1,0 +1,9 @@
+[project]
+name = "Embed Image Base 64"
+version = "1.0.0"
+description = "Code examples demonstrating IronPDF for Python Feature: Embed Image Base 64"
+license = { file = "LICENSE" }
+readme = "README.md"
+homepage = "https://github.com/iron-software/IronPdfPython.Examples"
+keywords = ["IronPDF for Python", "python", "Embed Image Base 64", "ironpdfpython.examples", "Code Example"]
+dependencies = ["ironpdf==2024.11.1.4"]

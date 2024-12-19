@@ -1,24 +1,34 @@
 ***Based on <https://ironpdf.com/examples/digitally-sign-a-pdf/>***
 
-This Python example demonstrates leveraging the IronPDF library to both cryptographically sign an existing PDF and also to generate a new PDF that includes a digital signature. Through these capabilities, developers can enhance the security and authenticity of their PDF documents.
+The following Python script outlines the process of utilizing the IronPDF library to both digitally sign an existing PDF document and generate a new PDF with an embedded digital signature. This is crucial for adding security and authenticity to your PDFs, which can be vital for various business and legal documents.
 
 ```python
-# Importing necessary classes from the IronPdf namespace
-from IronPdf import IronPdfDocument
+# Import the necessary library
+from IronPdf import PdfDocument
 
-# Create an instance of PdfDocument
-pdf_document = IronPdfDocument('path/to/your/input.pdf')
+# Load an existing PDF document from a specific path
+existing_pdf = PdfDocument("path/to/your/existing/document.pdf")
 
-# Signing the PDF with a digital certificate (.p12 or .pfx file)
-signed_pdf = pdf_document.sign('path/to/your/certificate.p12', 'certificate-password')
+# Sign the PDF using a digital signature file
+signature = "path/to/your/signature.pfx"
+password = "your_password"
+signed_pdf = existing_pdf.Sign(signature, password)
 
-# Save the signed PDF to a specified path
-signed_pdf.saveAs('path/to/your/signed_output.pdf')
+# Save the signed PDF to a new file
+signed_pdf.SaveAs("path/to/your/signed_document.pdf")
+
+# Create a new PDF document
+new_pdf = PdfDocument()
+new_pdf.AddPage()
+
+# Optionally, add some content to the new PDF
+new_pdf.AddText("This is a digitally signed new PDF document.")
+
+# Sign the newly created PDF
+new_pdf.Sign(signature, password)
+
+# Save the newly created and signed PDF
+new_pdf.SaveAs("path/to/your/new_signed_document.pdf")
 ```
 
-### Key Features of This Code:
-- **IronPdfDocument**: This class is utilized to create an instance of the PDF to be signed.
-- **sign() method**: This method is called on the PDF instance with parameters pointing to the certificate and its password.
-- **saveAs() method**: After the signing process, the signed PDF is saved in the desired location with this method.
-
-This approach ensures that the PDFs are securely signed using a digital certificate, maintaining the integrity and non-repudiation of the documents .
+This script demonstrates a straightforward method to secure your PDF files using IronPDF's robust features, making it an essential tool in today's digital document workflows. Whether you're securing transactional documents or ensuring the authenticity of reports, IronPDF provides the functionality necessary to protect your PDFs effectively.

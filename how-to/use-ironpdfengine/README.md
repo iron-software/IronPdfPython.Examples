@@ -1,36 +1,40 @@
-# Utilizing IronPdfEngine
+# IronPdfEngine Usage Guide
 
 ***Based on <https://ironpdf.com/how-to/use-ironpdfengine/>***
 
 
-IronPdfEngine is a dedicated gRPC server designed to support various IronPDF operations, including the generation, modification, and reading of PDF documents.
+IronPdfEngine is a specialized gRPC server designed to manage various IronPDF operations, including creating, editing, and reading PDF documents.
 
-## IronPdf Python and IronPdfEngine Interaction
+### Getting Started with IronPDF
 
-IronPdf for Python **does not require** the IronPdfEngine to function. It's an optional component for utilizing IronPdf. By default, IronPdf for Python operates independently without IronPdfEngine.
+---
 
-Each release of IronPdf for Python necessitates a corresponding version of IronPdfEngine. Cross-version compatibility is not supported. Thus, for any given version of IronPdf for Python, an exact match with IronPdfEngine is required. For instance, IronPdf 2024.2.2 will pair with IronPdfEngine 2024.2.2.
+## Python and IronPdfEngine
 
-### Configuring IronPdf Python to Connect to Remote IronPdfEngine
+IronPdf Python **does not necessitate** the use of IronPdfEngine to function. Implementing IronPdfEngine is purely optional when utilizing IronPdf. IronPdf for Python is configured to operate independently from IronPdfEngine by default.
 
-Suppose you have IronPdfEngine running remotely at `123.456.7.8:33350`.
+Each version of IronPdf for Python is compatible exclusively with the corresponding version of IronPdfEngine, and cross-version compatibility is not supported. For instance, IronPdf version 2024.2.2 will synchronize with IronPdfEngine version 2024.2.2.
 
-For guidelines on deploying IronPdfEngine remotely, please visit: ["How to Pull and Run IronPdfEngine"](https://ironpdf.com/how-to/pull-run-ironpdfengine/).
+### Utilizing IronPdf Python with Remote IronPdfEngine
 
-Begin by installing IronPdf using pip:
+Suppose IronPdfEngine is hosted remotely at `123.456.7.8:33350`.
+
+For details on deploying IronPdfEngine remotely, please consult the guide on how to [Initialize and Operate IronPdfEngine](https://ironpdf.com/how-to/pull-run-ironpdfengine/).
+
+To install IronPdf, enter the following command:
 ```shell
 pip install ironpdf
 ```
 
-Once IronPdf is installed, you need to configure your application to connect to IronPdfEngine. It's critical to ensure that the engine's address is reachable and not blocked by any firewalls. Use the `IronPdfConnectionConfiguration` class to set up your connection. Insert the following configuration code at the beginning of your project or just before invoking any IronPdf methods:
+Once IronPdf is installed, you need to configure where IronPdf should find the IronPdfEngine (ensuring the address is reachable and not obstructed by any firewall). Utilize the `IronPdfConnectionConfiguration` class to set up your connection parameters. Implement this configuration at the beginning of your application or just before invoking any IronPdf functions.
 
-```python
-# Establish connection settings with the remote IronPdfEngine
+```py
+# Configures the IronPdf to connect to a remote IronPdfEngine instance
 
 ***Based on <https://ironpdf.com/how-to/use-ironpdfengine/>***
 
-IronPdfConnectionConfiguration config = IronPdfConnectionConfiguration.RemoteServer("123.456.7.8:33350");
-Installation.ConnectToIronPdfHost(config);
+Installation.ConnectToIronPdfHost(
+    IronPdf.GrpcLayer.IronPdfConnectionConfiguration.RemoteServer("123.456.7.8:33350"));
 ```
 
-That's it! With this setup, your application will be connected to the remote IronPdfEngine, enabling you to leverage its capabilities remotely.
+Just like that, your application will be linked to the remote IronPdfEngine!

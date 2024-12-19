@@ -1,0 +1,9 @@
+[project]
+name = "License Keys"
+version = "1.0.0"
+description = "Code examples demonstrating IronPDF for Python Feature: License Keys"
+license = { file = "LICENSE" }
+readme = "README.md"
+homepage = "https://github.com/iron-software/IronPdfPython.Examples"
+keywords = ["IronPDF for Python", "python", "License Keys", "ironpdfpython.examples", "How-To"]
+dependencies = ["ironpdf==2024.11.1.4"]
