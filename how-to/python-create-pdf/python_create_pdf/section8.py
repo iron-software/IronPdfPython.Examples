@@ -1,7 +1,7 @@
 from ironpdf import *
 
 def run():
-    # Import statement for IronPDF Python
+    # Import statement for IronPDF for Python
     # Apply your license key
     License.LicenseKey = "IRONPDF-MYLICENSE-KEY-1EF01"
     # Instantiate Renderer
@@ -22,5 +22,7 @@ def run():
     pdf = renderer.RenderUrlAsPdf("https://ironpdf.com")
     # Export to a file or Stream
     pdf.SaveAs("url.pdf")
+    # Set user password for PDF document security
     pdf.SecuritySettings.UserPassword = "sharable"
+    # Save the password-protected PDF
     pdf.SaveAs("protected.pdf")

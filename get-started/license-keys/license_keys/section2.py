@@ -1,4 +1,4 @@
-from ironpdf import *
+from ironpdf import License
 
 def run():
     # Check if the license key has been applied

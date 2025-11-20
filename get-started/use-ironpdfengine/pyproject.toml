@@ -5,5 +5,5 @@ description = "Code examples demonstrating IronPDF for Python Feature: Use Ironp
 license = { file = "LICENSE" }
 readme = "README.md"
 homepage = "https://github.com/iron-software/IronPdfPython.Examples"
-keywords = ["IronPDF for Python", "python", "Use Ironpdfengine", "ironpdfpython.examples", "How-To"]
+keywords = ["IronPDF for Python", "python", "Use Ironpdfengine", "ironpdfpython.examples", "Getting Started"]
 dependencies = ["ironpdf==2024.11.1.4"]

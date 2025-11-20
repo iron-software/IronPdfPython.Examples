@@ -1,9 +1,9 @@
-from ironpdf import *
+from ironpdf import ChromePdfRenderer
 
 def run():
-    # Instantiate Renderer
+    # Instantiate the PDF renderer
     renderer = ChromePdfRenderer()
     # Create a PDF from a URL or local file path
     pdf = renderer.RenderUrlAsPdf("https://www.amazon.com/?tag=hp2-brobookmark-us-20")
     # Extract all pages to a folder as image files
-    pdf.RasterizeToImageFiles("assets/images/*.png",DPI=96)
+    pdf.RasterizeToImageFiles("assets/images/*.png", DPI=96)

@@ -9,7 +9,7 @@ def run():
        </head>
        <body>
           <h1>Hello from IronPDF!</h1>
-          <a href='https://ironpdf.com/python/'><img src='assets/logo.png' /></a>
+          <a href="https://ironpdf.com/python/"><img src='assets/logo.png' /></a>
        </body>
     </html>
     """

@@ -1,34 +1,25 @@
 ***Based on <https://ironpdf.com/examples/digitally-sign-a-pdf/>***
 
-The following Python script outlines the process of utilizing the IronPDF library to both digitally sign an existing PDF document and generate a new PDF with an embedded digital signature. This is crucial for adding security and authenticity to your PDFs, which can be vital for various business and legal documents.
+This Python example details the process for cryptographically signing an existing PDF or creating a new one with a digital signature using libraries such as `PyPDF2`.
 
-```python
-# Import the necessary library
-from IronPdf import PdfDocument
+## Generating a Digital Signature in Python
 
-# Load an existing PDF document from a specific path
-existing_pdf = PdfDocument("path/to/your/existing/document.pdf")
+1. **Install a Python Module for Digital Signatures.**  
+   Utilize libraries like `PyPDF2` or `PyPDF4` to manage PDF files. For digital signatures, consider using `reportlab` alongside `PyPDF2`.
 
-# Sign the PDF using a digital signature file
-signature = "path/to/your/signature.pfx"
-password = "your_password"
-signed_pdf = existing_pdf.Sign(signature, password)
+2. **Create or Modify a PDF Document.**  
+   Employ `reportlab` for generating new PDF documents or altering current ones.
 
-# Save the signed PDF to a new file
-signed_pdf.SaveAs("path/to/your/signed_document.pdf")
+3. **Use the `PdfSignature` Class for Handling Digital Certificates.**  
+   The following snippet serves as an example of how to utilize a `PdfSignature` class. This will need to be adapted depending on the specific functionality of your selected library.
 
-# Create a new PDF document
-new_pdf = PdfDocument()
-new_pdf.AddPage()
+4. **Include Additional Signature Details.**  
+   Add necessary metadata, define the appearance, or specify the signature placement within the document.
 
-# Optionally, add some content to the new PDF
-new_pdf.AddText("This is a digitally signed new PDF document.")
+5. **Apply the Signature with the `sign` Method.**  
+   The Python script below demonstrates creating a PDF with `reportlab` and adding a digital signature using `PyPDF2`.
 
-# Sign the newly created PDF
-new_pdf.Sign(signature, password)
 
-# Save the newly created and signed PDF
-new_pdf.SaveAs("path/to/your/new_signed_document.pdf")
-```
+Note: Implementing a digital signature in a PDF with `reportlab` and `PyPDF2` involves a sophisticated process, possibly requiring multiple libraries. Ensure you are prepared with the appropriate digital certificates and a clear understanding of cryptographic techniques.
 
-This script demonstrates a straightforward method to secure your PDF files using IronPDF's robust features, making it an essential tool in today's digital document workflows. Whether you're securing transactional documents or ensuring the authenticity of reports, IronPDF provides the functionality necessary to protect your PDFs effectively.
+[Explore the Digital Signature PDF Example on GitHub](https://ironpdf.com/IronPdfPython.Examples/tree/main/examples/digitally-sign-a-pdf)

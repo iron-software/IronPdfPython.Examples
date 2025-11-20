@@ -1,588 +1,150 @@
-# HTML to PDF: Python
+# HTML to PDF Conversion Using Python
 
 ***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
 
 
-This document offers a detailed guide for Python developers on how to leverage the IronPDF library to transform HTML content into premium PDF (portable document format) files.
+This document provides a comprehensive guide for Python developers on how to leverage the IronPDF library to convert HTML content into PDF documents of superior quality.
 
-IronPDF serves as an extensive tool for PDF conversion and processing, compatible with a variety of programming languages such as [.NET](https://ironpdf.com/), [Java](https://ironpdf.com/java/), and [Python](https://ironpdf.com/python/). Here, the focus is primarily on employing IronPDF within Python environments to convert HTML content, be it through files or direct markup.
+IronPDF is an extensive library designed for converting and processing PDF documents and supports several programming languages, such as [.NET](https://ironpdf.com/), [Java](https://ironpdf.com/java/), and [Python](https://ironpdf.com/python/). This guide focuses on the Python implementation of IronPDF for transforming HTML code, whether from files or direct HTML strings, into PDFs.
 
-For a guide on conducting HTML to PDF conversions in .NET applications, please see the detailed tutorial [here](https://ironpdf.com/tutorials/html-to-pdf/).
+For those interested in .NET implementations, consider checking out the [HTML to PDF conversion in .NET tutorial](https://ironpdf.com/tutorials/html-to-pdf/).
 
-<hr class="separator">
+---
 
-<p class="main-content__segment-title">Overview</p>
+### Overview
 
+---
 
+### Getting Started
 
+## Step 1: Installation of IronPDF Python Library
 
-<hr style="clear: both;" class="separator">
-
-
-
-
-<p class="main-content__segment-title">Getting Started</p>
+To incorporate IronPDF into your Python environment, the `pip` package manager offers a straightforward installation approach. Enter the following command in your terminal:
 
 ```shell
 pip install ironpdf
 ```
 
-To install a specific version of IronPdf, please use the following syntax: "==2023.x.x". For example, you can run the command "pip install ironpdf==2023.x.x".
-
-IronPDF Python relies on IronPDF .NET library, specifically .NET 6.0, as its underlying technology. Therefore, it is necessary to have the [.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) installed on your machine in order to use IronPDF Python.
-
-<hr class="separator">
-
-Below is the paraphrased section with resolved URL paths:
+For installing a specific release of IronPDF, adjust the command as follows:
 
 ```shell
-pip install ironpdf
+pip install ironpdf==2023.x.x
 ```
 
-To download a specific release of IronPdf, employ the command structure "ironpdf==2023.x.x". For instance, execute "pip install ironpdf==2023.x.x" to install that particular version.
+It's important to note that IronPDF for Python operates on top of the .NET 6.0 framework, so ensure that the [.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) is installed on your system.
 
-IronPDF for Python is built on the IronPDF .NET library, specifically targeting .NET 6.0. Consequently, the installation of the [.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) on your system is essential for operating IronPDF in Python environments.
+---
 
-<hr class="separator">
+### Practical Guide and Examples
 
-<p class="main-content__segment-title">How-To Guide and Code Examples</p>
+## Step 2: HTML to PDF Conversion Techniques
 
-## 2. Converting HTML to PDF
+IronPDF excels in converting HTML to PDF using the `ChromePdfRenderer` and `PdfDocument` classes, supporting various conversion scenarios:
 
-In this portion of our guide, we explore the robust features of IronPDF to transform HTML into PDF format.
+- Transforming HTML strings or markup into PDF
+- Converting HTML files or zip archives into PDF
+- Transforming URLs into PDFs
 
-At the core of the conversion process is the `ChromePdfRenderer` class, which is instrumental in rendering PDF documents. Additionally, the `PdfDocument` class enriches the library with various document manipulation functionalities. IronPDF offers dependable solutions for converting HTML to PDF, effectively addressing **three main scenarios**:
+Each case is discussed briefly below, with links to additional resources.
 
-- Transforming HTML strings or markup into PDFs
-- Converting HTML files or zipped content into PDFs
-- Transforming URLs into PDF documents
+### 2.1 Load the IronPDF Module
 
-Each scenario is succinctly discussed in this section, along with supplementary materials for further exploration.
+Begin by importing IronPDF at the start of your Python files where it will be utilized:
 
-### 2.1 Integrating the IronPDF Library
-
-To utilize IronPDF in your project, incorporate these import statements at the start of your Python source files that will make use of the IronPDF functionalities:
 ```python
-# Necessary imports for IronPDF Python usage
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
 from ironpdf import *
 ```
 
-```python
-# Importing the necessary modules from IronPDF for Python
+### 2.2 Set Up Your License Key (Optional)
 
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
+IronPDF is freely usable, but free usage introduces a watermark on the resulting PDFs.
 
-from ironpdf import *
-```
-
-### 2.2. Configure Licensing (Optional)
-
-While IronPDF for Python can be used at no cost, it places a tiled watermark on PDFs generated by free accounts.
-
-<div class="content-img-align-center">
-	<div class="center-image-wrapper">
-    <iframe loading="lazy" src="/static-assets/ironpdf-python/tutorials/html-to-pdf/html-to-pdf-no-license.pdf" width="100%" height="500px">
-</iframe>
-    <p class="content__image-caption">Visit <a href='/python/licensing/'>licensing page</a> to obtain your license key and enjoy watermark-free PDF.</p>
-	</div>
+```html
+<div style="text-align: center;">
+    <iframe src="https://ironpdf.com/static-assets/ironpdf-python/tutorials/html-to-pdf/html-to-pdf-no-license.pdf" width="100%" height="500px"></iframe>
+    <p>For a watermark-free experience, consider visiting our <a href="https://ironpdf.com/python/licensing/">licensing page</a>.</p>
 </div>
-
-To create PDF files that are free from watermarks when using IronPDF, a valid license key must be set within the library. Below is a code snippet that illustrates how to apply your license key:
-
-```py
-# Setting your license key
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
-License.LicenseKey = "IRONPDF-YOUR-LICENSE-KEY-XYZ123"
 ```
 
-Make sure to place this code to set the license key before executing any PDF creation or manipulation tasks.
+To produce watermark-free PDFs:
 
-```py
-# Set the license for using IronPDF without watermark
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
-License.LicenseKey = "IRONPDF-MYLICENSE-KEY-1EF01"
+```python
+License.LicenseKey = "YOUR-LICENSE-KEY"
 ```
 
-Make sure to set the license key prior to creating or modifying PDF documents. It's advised to initiate the `License.LicenseKey` method as the first line in your script to ensure proper licensing is applied from the start.
+### 2.3 Configure Log File Location (Optional)
 
-For acquiring a license key, visit our [licensing page](https://ironpdf.com/python/licensing/) or get in touch with us to [request a free trial license key](https://ironpdf.com#trial-license).
+Customize logging options in IronPDF by setting the log file path and mode:
 
-### 2.3 Configure the Log File Path (optional)
-
-IronPDF is equipped to produce log messages, which are saved by default in a text file titled **Default.log** located in the same folder as your Python script.
-
-Should you prefer to tailor the logging file's name or its storage location, you can adjust the `LogFilePath` property as demonstrated in the following code snippet:
-
-```py
-# Customize the log path
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
+```python
 Logger.EnableDebugging = True
 Logger.LogFilePath = "Custom.log"
 Logger.LoggingMode = Logger.LoggingModes.All
 ```
 
-It's essential to establish the `Logger.LogFilePath` property prior to invoking any PDF conversion or manipulation functionalities within IronPDF.
+### 2.4 Generate PDF from HTML String
 
-Here's a paraphrased version of the provided code snippet with enhanced comments, helping to explain the setup for logging configuration in IronPDF:
+To convert a simple HTML snippet to PDF:
 
-```py
-# Enable debugging to capture detailed log information
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
-Logger.EnableDebugging = True
-
-# Specify the name and path of the log file
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
-Logger.LogFilePath = "Custom.log"
-
-# Set the logging mode to capture all events
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
-Logger.LoggingMode = Logger.LoggingModes.All
-```
-
-This code snippet configures IronPDF to generate a comprehensive log file named `Custom.log`, which records all debugging information, assisting developers in troubleshooting and ensuring seamless PDF generation.
-
-Setting the `Logger.LogFilePath` property should precede all PDF conversion and manipulation operations.
-
-### 2.4. Generating PDFs from HTML Strings
-
-The `RenderHtmlAsPdf` functionality allows for HTML strings to be transformed into documents in PDF format.
-
-Here’s how you can create a PDF from a basic HTML string featuring a header:
-
-```py
+```python
 from ironpdf import *
-
-# Create a new instance of the renderer
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
 
 renderer = ChromePdfRenderer()
-
-# Convert HTML string to PDF
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
 pdf = renderer.RenderHtmlAsPdf("<h1>Welcome to IronPDF!</h1>")
-
-# Save the PDF to a file
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
-pdf.SaveAs("your_pdf_output.pdf")
+pdf.SaveAs("output.pdf")
 ```
 
-Here's the paraphrased section:
+![Conversion Preview](https://ironpdf.com/static-assets/ironpdf-java/tutorials/html-to-pdf/html-to-pdf-html-string-to-pdf.webp)
+_The `RenderHtmlAsPdf` method ensures precise renderings of HTML content, complete with CSS and JavaScript._
 
-```py
-from ironpdf import ChromePdfRenderer
+For increased control, specify a base path to load external resources:
 
-# Creating a new instance of the PDF renderer
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
-renderer = ChromePdfRenderer()
-
-# Generating a PDF document from a specified HTML string
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
-pdf_document = renderer.RenderHtmlAsPdf("<h1>Welcome to IronPDF!</h1>")
-
-# Saving the generated PDF to a file
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
-pdf_document.SaveAs("generated-output.pdf")
-```
-
-This revised code block is functionally equivalent to the original, with changes made to variable naming and comments to enhance clarity and vary the phrasing.
-
-<div class="content-img-align-center">
-	<div class="center-image-wrapper">
-		<a rel="nofollow" href="/static-assets/ironpdf-java/tutorials/html-to-pdf/html-to-pdf-5.webp" target="_blank"><img src="/static-assets/ironpdf-java/tutorials/html-to-pdf/html-to-pdf-5.webp" alt="" class="img-responsive add-shadow"></a>
-    <p class="content__image-caption">Convert HTML markup into PDF File using the <code>RenderHtmlAsPdf</code> method. This method can generate PDFs using all valid W3C-compliant HTML and CSS markup.</p>
-	</div>
-</div>
-
-The method `RenderHtmlAsPdf` effectively interprets HTML, CSS, and JavaScript, mimicking the capabilities of contemporary browsers to provide a precise depiction of the content. This capability allows software developers to generate PDF documents that are visually consistent with their web representations.
-
-Additionally, `RenderHtmlAsPdf` is adept at incorporating external resources like images, stylesheets, and scripts, whether they are stored locally or on a network. Below is an example illustrating how to generate a PDF from HTML content that includes references to a CSS file and an image located within an **assets** directory:
-
-Here's the paraphrased section of the article, with updated and resolved URLs for image paths:
-
-```py
-from ironpdf import *
-
-# Prepare the HTML content with external CSS and image link
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
+```python
 html_content = """
 <html>
    <head>
-      <title>Welcome Message</title>
-      <link rel='stylesheet' href='assets/style.css'>
+      <title>Welcome Page</title>
+      <link rel='stylesheet' href='assets/main.css'>
    </head>
    <body>
-      <h1>Greetings from IronPDF!</h1>
-      <a href='https://ironpdf.com/python/'><img src='https://ironpdf.com/assets/logo.png' /></a>
+      <h1>Welcome to IronPDF!</h1>
+      <img src='assets/logo.png'>
    </body>
 </html>
 """
 
-# Create an instance of the ChromePdfRenderer class
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
-renderer_instance = ChromePdfRenderer()
-
-# Generate a PDF by rendering the HTML content
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
-generated_pdf = renderer_instance.RenderHtmlAsPdf(html_content)
-
-# Save the generated PDF to a file
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
-generated_pdf.SaveAs("output_file.pdf")
+pdf = renderer.RenderHtmlAsPdf(html_content)
+pdf.SaveAs("welcome_output.pdf")
 ```
 
-This code initializes the `IronPDF` library, sets up HTML content including an external CSS file and an image, utilizes the `ChromePdfRenderer` to produce a PDF from the HTML, and finally saves it to a file called `"output_file.pdf"`. It now includes absolute paths for resources to ensure clarity.
+### 2.5 Generate PDF from a URL
 
-The output from executing the above code snippet is displayed in the image that follows.
+Convert a live webpage to a PDF:
 
-<div class="content-img-align-center">
-	<div class="center-image-wrapper">
-		<a rel="nofollow" href="/static-assets/ironpdf-python/tutorials/html-to-pdf/html-to-pdf-html-string-to-pdf.webp" target="_blank"><img src="/static-assets/ironpdf-python/tutorials/html-to-pdf/html-to-pdf-html-string-to-pdf.webp" alt="" class="img-responsive add-shadow"></a>
-    <p class="content__image-caption"><code>RenderHtmlAsPdf</code> method is capable of rendering various types of HTML content. If it can be displayed in Chrome, then <code>RenderHtmlAsPdf</code> will render it!</p>
-	</div>
-</div>
-
-Moreover, developers can enhance the functionality of the `RenderHtmlAsPdf` method by supplying an optional second argument. This argument is used to define a base path for web assets, which can be either a local directory or a URL, depending on where the resources are hosted.
-
-For a more comprehensive exploration of how to deploy the `RenderHtmlAsPdf` method effectively, consider examining [this practical example](https://ironpdf.com/python/examples/using-html-to-create-a-pdf/) or delve into the detailed information available on the API Reference pages.
-
-### 2.5. Generating a PDF from a Webpage
-
-IronPDF enables the transformation of webpages into PDF files using the `RenderUrlAsPdf` method.
-
-Below is an illustrative example of converting content from a Wikipedia page to a PDF document.
-
-Here's the paraphrased section with updated markdown and resolved paths:
-
-```py
-from ironpdf import *
-
-# Initialize the PDF Renderer
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
-pdf_renderer = ChromePdfRenderer()
-
-# Convert a webpage to a PDF document
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
-pdf_document = pdf_renderer.RenderUrlAsPdf("https://en.wikipedia.org/wiki/PDF")
-
-# Save the generated PDF to a file
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
-pdf_document.SaveAs("url.pdf")
+```python
+pdf = renderer.RenderUrlAsPdf("https://en.wikipedia.org/wiki/PDF")
+pdf.SaveAs("wikipedia_pdf.pdf")
 ```
 
-The displayed PDF format is illustrated below.
+### 2.6 Generate PDF from an HTML File
 
-<div class="content-img-align-center">
-	<div class="center-image-wrapper">
-		<a rel="nofollow" href="/static-assets/ironpdf-java/tutorials/html-to-pdf/html-to-pdf-7.webp" target="_blank"><img src="/static-assets/ironpdf-java/tutorials/html-to-pdf/html-to-pdf-7.webp" alt="" class="img-responsive add-shadow"></a>
-	</div>
-</div>
+For converting locally stored HTML files:
 
-For additional details, you can visit the [code example](https://ironpdf.com/python/examples/converting-a-url-to-a-pdf/) that illustrates the process of transforming a webpage into a PDF document.
-
-### 2.6. Converting an HTML File to PDF
-
-IronPDF enables the transformation of HTML files into PDF documents, which are stored directly on your local system. It seamlessly renders HTML content into a corresponding PDF format.
-
-For an illustrative example of this feature, the code snippet below demonstrates the process of converting an HTML invoice. Access the HTML source of the [invoice here](https://codepen.io/tjoen/pen/wvgvLX).
-
-Below is the HTML markup for your reference:
-
-```html
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Invoice</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="license" href="https://www.opensource.org/licenses/mit-license/">
-    <script src="script.js"></script>
-</head>
-<body>
-<header>
-    <h1>Invoice</h1>
-    <address contenteditable>
-        <p>Jonathan Neal</p>
-        <p>101 E. Chapman Ave<br>Orange, CA 92866</p>
-        <p>(800) 555-1234</p>
-    </address>
-    <span><img alt="" src="http://www.jonathantneal.com/examples/invoice/logo.png"><input type="file" accept="image/*"></span>
-</header>
-<article>
-    <h1>Recipient</h1>
-    <address contenteditable>
-        <p>Some Company<br>c/o Some Guy</p>
-    </address>
-    <table class="meta">
-        <tr>
-            <th><span contenteditable>Invoice #</span></th>
-            <td><span contenteditable>101138</span></td>
-        </tr>
-        <tr>
-            <th><span contenteditable>Date</span></th>
-            <td><span contenteditable>January 1, 2012</span></td>
-        </tr>
-        <tr>
-            <th><span contenteditable>Amount Due</span></th>
-            <td><span id="prefix" contenteditable>$</span><span>600.00</span></td>
-        </tr>
-    </table>
-    <table class="inventory">
-        <thead>
-        <tr>
-            <th><span contenteditable>Item</span></th>
-            <th><span contenteditable>Description</span></th>
-            <th><span contenteditable>Rate</span></th>
-            <th><span contenteditable>Quantity</span></th>
-            <th><span contenteditable>Price</span></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td><a class="cut">-</a><span contenteditable>Front End Consultation</span></td>
-            <td><span contenteditable>Experience Review</span></td>
-            <td><span data-prefix>$</span><span contenteditable>150.00</span></td>
-            <td><span contenteditable>4</span></td>
-            <td><span data-prefix>$</span><span>600.00</span></td>
-        </tr>
-        </tbody>
-    </table>
-    <a class="add">+</a>
-    <table class="balance">
-        <tr>
-            <th><span contenteditable>Total</span></th>
-            <td><span data-prefix>$</span><span>600.00</span></td>
-        </tr>
-        <tr>
-            <th><span contenteditable>Amount Paid</span></th>
-            <td><span data-prefix>$</span><span contenteditable>0.00</span></td>
-        </tr>
-        <tr>
-            <th><span contenteditable>Balance Due</span></th>
-            <td><span data-prefix>$</span><span>600.00</span></td>
-        </tr>
-    </table>
-</article>
-<aside>
-    <h1><span contenteditable>Additional Notes</span></h1>
-    <div contenteditable>
-        <p>A finance charge of 1.5% will be made on unpaid balances after 30 days.</p>
-    </div>
-</aside>
-</body>
-</html>
+```python
+pdf = renderer.RenderHtmlFileAsPdf("invoices/SampleInvoice.html")
+pdf.SaveAs("converted_invoice.pdf")
 ```
 
-Here's the revised section:
+IronPDF automatically handles resource loading and integration, ensuring a faithful PDF representation of the original HTML.
 
----
-Suppose there's an HTML file, as well as corresponding CSS and JavaScript files, stored in a folder titled "invoices". IronPDF enables the conversion of this HTML document into a PDF format using Python. See the example below for the implementation:
+## Further Exploration
 
-```py
-# Initialize the PDF renderer
+Dive deeper into IronPDF's functionalities:
 
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
+- Experiment with [customizing PDF settings](https://ironpdf.com/python/examples/pdf-generation-settings/).
+- Add [personalized headers and footers](https://ironpdf.com/python/examples/html-headers-and-footers/), adjust margins ([IronPDF custom margins](https://ironpdf.com/python/examples/ironpdf-set-custom-margins/)) and set custom page dimensions ([custom paper sizes](https://ironpdf.com/python/examples/custom-pdf-paper-size/)).
+- Additional features like [watermarking](https://ironpdf.com/python/examples/pdf-watermarking/), text extraction ([extract PDF text](https://ironpdf.com/python/examples/extract-pdf-text/)), file size optimization ([PDF compression](https://ironpdf.com/python/examples/pdf-compression/)), and direct printing ([print PDFs with Python](https://ironpdf.com/how-to/python-print-pdf/)).
 
-renderer = ChromePdfRenderer()
+*You can [download IronPDF here](https://ironpdf.com/downloads/python-extract-text-from-pdf.zip).*
 
-# Convert HTML file to PDF
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
-pdf = renderer.RenderHtmlFileAsPdf("invoices/TestInvoice1.html")
-
-# Save the generated PDF
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
-pdf.SaveAs("htmlfile_to_pdf.pdf")
-```
-
-This process allows IronPDF to directly interpret the HTML and its related assets, ensuring that styles and scripts are properly incorporated into the final PDF. This ensures a consistent visual representation between the original web page and the converted PDF.
-
-Here is the paraphrased section of the article with resolved relative URL paths:
-
-```py
-# Initialize the PDF renderer
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
-renderer = ChromePdfRenderer()
-
-# Convert local HTML file to PDF
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
-pdf = renderer.RenderHtmlFileAsPdf("invoices/TestInvoice1.html")
-
-# Save the PDF to a file or output it to a stream
-
-***Based on <https://ironpdf.com/tutorials/html-to-pdf/>***
-
-pdf.SaveAs("htmlfile_to_pdf.pdf")
-```
-
-Just as IronPDF effectively handles the conversion of HTML strings to PDF documents, the software also seamlessly resolves relative URLs in HTML files. This guarantees that any included stylesheets and scripts are accurately applied in the PDF output. Consequently, the PDF accurately reflects the original web page's visual aesthetic.
-
-## 3. Further Exploration
-
-Dive deeper into the vast features IronPDF offers for converting HTML to PDF by exploring our [Code Examples](https://ironpdf.com/python/examples/using-html-to-create-a-pdf/) section.
-
-1. Explore [this detailed example](https://ironpdf.com/python/examples/pdf-generation-settings/) to learn how to tailor the visuals of your PDFs during conversion.
-   
-2. Master the creation of PDFs with custom [headers and footers](https://ironpdf.com/python/examples/html-headers-and-footers/), adjust [margin sizes](https://ironpdf.com/python/examples/ironpdf-set-custom-margins/) and [page dimensions](https://ironpdf.com/python/examples/custom-pdf-paper-size/), implement [watermarks](https://ironpdf.com/python/examples/pdf-watermarking/), and beyond.
-
-3. Further discover methods for [extracting text](https://ironpdf.com/python/examples/extract-pdf-text/), [optimizing PDF file sizes](https://ironpdf.com/python/examples/pdf-compression/), and [printing PDFs programmatically](https://ironpdf.com/python/how-to/python-print-pdf/).
-
-## HTML to PDF Conversion Tutorial Video
-
-<hr class="separator">
-
-### Access the Tutorial Video Quickly
-
-Discover the intuitive visual guide to converting HTML to PDF by watching the tutorial video provided below. This step-by-step tutorial is tailored to enhance your understanding and streamline your ability to implement PDF conversions within your projects.
-
-<div class="tutorial-section">
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="tutorial-image">
-        <img src="https://ironpdf.com/img/platforms/cps-intellij.svg" alt="" class="img-responsive add-shadow" style="width: 160px;">
-      </div>
-    </div>
-    <div class="col-sm-8">
-      <h3>Download the Java Source Code for this Tutorial</h3>
-      <p>You can download the complete Java source code for this tutorial as a zipped IntelliJ project, available for free.</p>
-      <a class="btn btn-white3" href="#">
-        <i class="fa fa-cloud-download"></i> Download the Source Code</a>
-    </div>
-  </div>
-</div>
-
-<div class="tutorial-section">
-  <div class="row">
-    <div class="col-sm-8">
-      <h3>Explore the GitHub Repository</h3>
-      <p>The complete source code for this tutorial is also hosted on GitHub. Get started quickly by cloning the repo. The project is packaged as an IntelliJ IDEA project but can be easily used in other Java IDEs.</p>
-      <a class="doc-link" href="#" target="_blank">Java HTML to PDF on GitHub <i class="fa fa-chevron-right"></i></a>
-    </div>
-    <div class="col-sm-4">
-      <div class="tutorial-image">
-        <img src="https://ironpdf.com/img/svgs/github-icon.svg" alt="" class="img-responsive add-shadow">
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="tutorial-section">
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="tutorial-image">
-        <img src="https://ironpdf.com/img/svgs/documentation.svg" alt="" class="img-responsive add-shadow" style="max-width: 110px; width: 100px; height: 140px;" width="100" height="140">
-      </div>
-    </div>
-    <div class="col-sm-8">
-      <h3>Review the API Documentation</h3>
-      <p>For a comprehensive guide to all the features of the IronPDF, explore the detailed API documentation. This resource details all the namespaces, classes, methods, and more, that you can use in your applications.</p>
-      <a class="doc-link" href="https://ironpdf.com/java/object-reference/api/" target="_blank">Access the API Reference <i class="fa fa-chevron-right"></i></a>
-    </div>
-  </div>
-</div>
-
-<!--- [Download IronPDF](https://ironpdf.com/downloads/python-extract-text-from-pdf.zip) to get started with text extraction from PDF files. --->
-
-<a name ="video"></a>
-
-<hr class="separator">
-
-<h4 class="tutorial-segment-title">Tutorial Quick Access</h4>
-
-<div class="tutorial-section">
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="tutorial-image">
-        <img alt="" class="img-responsive add-shadow" src="/img/platforms/cps-intellij.svg" style="width: 160px;">
-      </div>
-    </div>
-    <div class="col-sm-8">
-      <h3>Download this Tutorial as Java Source Code</h3>
-      <p>The full HTML to PDF Java Source Code for this tutorial is available to download for free as a zipped IntelliJ project.</p>
-      <a class="btn btn-white3" href="#">
-        <i class="fa fa-cloud-download"></i>Download</a>
-    </div>
-  </div>
-</div>
-
-<div class="tutorial-section">
-  <div class="row">
-    <div class="col-sm-8">
-      <h3>Explore this Tutorial on GitHub</h3>
-      <p>The source code for this project is available on GitHub.</p>
-      <p>Use this code as an easy way to get up and running in just a few minutes. The project is saved as an IntellJ IDEA project, but can be imported into other popular Java IDEs.</p>
-      <a class="doc-link" href="#" target="_blank">Java HTML to PDF <i class="fa fa-chevron-right"></i></a>
-    </div>
-    <div class="col-sm-4">
-      <div class="tutorial-image">
-        <img alt="" class="img-responsive add-shadow" src="/img/svgs/github-icon.svg">
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="tutorial-section">
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="tutorial-image">
-        <img style="max-width: 110px; width: 100px; height: 140px;" alt="" class="img-responsive add-shadow" src="/img/svgs/documentation.svg" width="100" height="140">
-      </div>
-    </div>
-    <div class="col-sm-8">
-      <h3>View the API Reference</h3>
-      <p>Explore the API Reference for IronPDF, outlining the details of all of IronPDF’s features, namespaces, classes, methods fields and enums.</p>
-      <a class="doc-link" href="/java/object-reference/api/" target="_blank">View the API Reference <i class="fa fa-chevron-right"></i></a>
-    </div>
-  </div>
-</div>
-
-Here's the paraphrased section of the article, with relative URL paths resolved to ironpdf.com:
-
------
-*[Download](https://ironpdf.com/downloads/python-extract-text-from-pdf.zip) the software.*
-
+Explore these resources to harness the full potential of PDF generation and manipulation with IronPDF.

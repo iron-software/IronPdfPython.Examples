@@ -1,13 +1,15 @@
 ***Based on <https://ironpdf.com/examples/embed-image-base64/>***
 
-IronPDF for Python is capable of transforming image byte data directly into PDF files.
+IronPDF for Python seamlessly transforms raw image byte data into PDF documents.
 
-Begin by extracting the byte stream from its source—this might be a database, network connection, or file. Next, convert this byte stream into a string format. You can then construct an HTML string embedding the image data as a base64-encoded value in the `src` attribute of an `img` tag:
+First, extract the byte stream from your chosen data source, whether it's a database, network connection, or local file. Convert this byte data into a character string. Next, incorporate this string into an HTML snippet by embedding it within a `base64` encoded `src` attribute in an `img` tag:
 
-```txt
-<img src="data:image/png;base64,{BINARY+DATA+HERE}>
+```html
+<img src="data:image/jpeg;base64, [your_encoded_string_here]" />
 ```
 
-Once your HTML string is ready, pass it to the `RenderHtmlAsPdf` method to generate your PDF.
+Once your HTML string is ready, utilize the `RenderHtmlAsPdf` function and pass the HTML string as its parameter.
 
-IronPDF excels by utilizing HTML as the foundational design language. Simply convert your media into proper HTML format, and allow IronPDF to handle the conversion process efficiently.
+IronPDF excels by leveraging HTML as the backbone for layout design. Simply convert your content into valid HTML format and let IronPDF handle the conversion to PDF.
+
+Learn more about creating PDFs using IronPDF for Python by visiting: [Learn to create PDFs with IronPDF for Python today!](https://ironpdf.com/python/how-to/python-create-pdf/).

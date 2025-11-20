@@ -1,7 +1,7 @@
 from ironpdf import *
 
 def run():
-    # Create a PDF with editable forms from HTML using form and input tags
+    # Define HTML content for a simple form
     form_html = """
     <html>
     <body>
@@ -13,18 +13,21 @@ def run():
     </body>
     </html>
     """
-    # Instantiate Renderer
+    # Instantiate a PDF renderer
     renderer = ChromePdfRenderer()
+    # Set the option to create PDF forms from HTML
     renderer.RenderingOptions.CreatePdfFormsFromHtml = True
+    # Render the HTML content as a PDF file and save it
     renderer.RenderHtmlAsPdf(form_html).SaveAs("BasicForm.pdf")
-    # Read and Write PDF form values
+    # Load the created PDF document
     form_document = PdfDocument.FromFile("BasicForm.pdf")
-    # Set and Read the value of the "firstname" field
-    first_name_field = form_document.Form.GetFieldByName("firstname")
+    # Access the "firstname" field and set its value
+    first_name_field = form_document.Form.FindFormField("firstname")
     first_name_field.Value = "Minnie"
     print("FirstNameField value: {}".format(first_name_field.Value))
-    # Set and Read the value of the "lastname" field
-    last_name_field = form_document.Form.GetFieldByName("lastname")
+    # Access the "lastname" field and set its value
+    last_name_field = form_document.Form.FindFormField("lastname")
     last_name_field.Value = "Mouse"
     print("LastNameField value: {}".format(last_name_field.Value))
+    # Save the filled form to a new PDF file
     form_document.SaveAs("FilledForm.pdf")
