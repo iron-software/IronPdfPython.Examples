@@ -1,5 +1,5 @@
 [project]
-name = "Digitally Sign A Pdf"
+name = "ironpdf-python-digitally-sign-a-pdf"
 version = "1.0.0"
 description = "Code examples demonstrating IronPDF for Python Feature: Digitally Sign A Pdf"
 license = { file = "LICENSE" }

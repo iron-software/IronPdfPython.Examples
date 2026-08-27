@@ -1,5 +1,5 @@
 [project]
-name = "Python Compress Pdf"
+name = "ironpdf-python-compress-pdf"
 version = "1.0.0"
 description = "Code examples demonstrating IronPDF for Python Feature: Python Compress Pdf"
 license = { file = "LICENSE" }

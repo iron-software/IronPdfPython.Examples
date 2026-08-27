@@ -1,5 +1,5 @@
 [project]
-name = "Multi Frame Tiff To Pdf"
+name = "ironpdf-python-multi-frame-tiff-to-pdf"
 version = "1.0.0"
 description = "Code examples demonstrating IronPDF for Python Feature: Multi Frame Tiff To Pdf"
 license = { file = "LICENSE" }

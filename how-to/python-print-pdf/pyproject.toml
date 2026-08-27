@@ -1,5 +1,5 @@
 [project]
-name = "Python Print Pdf"
+name = "ironpdf-python-print-pdf"
 version = "1.0.0"
 description = "Code examples demonstrating IronPDF for Python Feature: Python Print Pdf"
 license = { file = "LICENSE" }

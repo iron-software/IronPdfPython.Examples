@@ -1,5 +1,5 @@
 [project]
-name = "Converting A Url To A Pdf"
+name = "ironpdf-python-converting-a-url-to-a-pdf"
 version = "1.0.0"
 description = "Code examples demonstrating IronPDF for Python Feature: Converting A Url To A Pdf"
 license = { file = "LICENSE" }

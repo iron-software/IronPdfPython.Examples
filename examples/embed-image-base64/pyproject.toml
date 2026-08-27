@@ -1,5 +1,5 @@
 [project]
-name = "Embed Image Base 64"
+name = "ironpdf-python-embed-image-base64"
 version = "1.0.0"
 description = "Code examples demonstrating IronPDF for Python Feature: Embed Image Base 64"
 license = { file = "LICENSE" }

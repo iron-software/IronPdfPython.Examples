@@ -1,5 +1,5 @@
 [project]
-name = "Quickstart"
+name = "ironpdf-python-quickstart"
 version = "1.0.0"
 description = "Code examples demonstrating IronPDF for Python Feature: Quickstart"
 license = { file = "LICENSE" }

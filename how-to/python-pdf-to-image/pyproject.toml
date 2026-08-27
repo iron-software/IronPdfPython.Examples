@@ -1,5 +1,5 @@
 [project]
-name = "Python Pdf To Image"
+name = "ironpdf-python-pdf-to-image"
 version = "1.0.0"
 description = "Code examples demonstrating IronPDF for Python Feature: Python Pdf To Image"
 license = { file = "LICENSE" }

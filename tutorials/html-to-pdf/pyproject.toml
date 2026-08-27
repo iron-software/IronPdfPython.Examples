@@ -1,5 +1,5 @@
 [project]
-name = "Html To Pdf"
+name = "ironpdf-python-html-to-pdf"
 version = "1.0.0"
 description = "Code examples demonstrating IronPDF for Python Feature: Html To Pdf"
 license = { file = "LICENSE" }
