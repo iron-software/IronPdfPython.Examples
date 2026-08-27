@@ -1,4 +1,4 @@
-***Based on <https://ironpdf.com/examples/embed-image-base64/>***
+> Full guide: [Embed image base64](https://ironpdf.com/examples/embed-image-base64/)
 
 IronPDF for Python seamlessly transforms raw image byte data into PDF documents.
 

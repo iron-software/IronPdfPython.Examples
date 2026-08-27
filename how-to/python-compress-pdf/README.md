@@ -1,6 +1,6 @@
 # How to Compress PDF Files in Python
 
-***Based on <https://ironpdf.com/how-to/python-compress-pdf/>***
+> Full guide: [How to Compress PDF Files in Python](https://ironpdf.com/how-to/python-compress-pdf/)
 
 
 PDFs are essential for storing and distributing documents, yet their large sizes can be burdensome. This size issue can hinder efficient document sharing and storage management. Fortunately, by using PDF compression methods, you can significantly reduce the size of your PDF files.
@@ -32,20 +32,14 @@ from ironpdf import PdfDocument
 
 # Open the PDF document from a specified location
 
-***Based on <https://ironpdf.com/how-to/python-compress-pdf/>***
-
 pdf = PdfDocument("Image based PDF.pdf")
 
 # Compress the PDF images while setting a lower quality value at 60 (max is 100) for increased compression
-
-***Based on <https://ironpdf.com/how-to/python-compress-pdf/>***
 
 pdf.CompressImages(60)
 pdf.SaveAs("document_compressed.pdf")
 
 # A different approach is chosen here by applying both compression and downscaling resolution based on visibility
-
-***Based on <https://ironpdf.com/how-to/python-compress-pdf/>***
 
 pdf.CompressImages(90, True)
 pdf.SaveAs("Compressed.pdf")

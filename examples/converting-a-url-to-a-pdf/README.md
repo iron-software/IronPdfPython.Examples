@@ -1,4 +1,4 @@
-***Based on <https://ironpdf.com/examples/converting-a-url-to-a-pdf/>***
+> Full guide: [Converting a URL to a PDF](https://ironpdf.com/examples/converting-a-url-to-a-pdf/)
 
 IronPDF for Python enables the conversion of online webpages into PDF documents.
 

@@ -1,6 +1,6 @@
 # Python PDF to Image Conversion
 
-***Based on <https://ironpdf.com/how-to/python-pdf-to-image/>***
+> Full guide: [Python PDF to Image Conversion](https://ironpdf.com/python/how-to/python-pdf-to-image/)
 
 
 ## 1. Introduction
@@ -28,17 +28,11 @@ from ironpdf import PdfDocument
 
 # Load the PDF document
 
-***Based on <https://ironpdf.com/how-to/python-pdf-to-image/>***
-
 pdf = PdfDocument.FromFile("my-content.pdf")
 
 # Convert each page to an image file in the specified directory
 
-***Based on <https://ironpdf.com/how-to/python-pdf-to-image/>***
-
 # Make sure "assets/images" directory exists before running this script
-
-***Based on <https://ironpdf.com/how-to/python-pdf-to-image/>***
 
 pdf.RasterizeToImageFiles("assets/images/*.png", DPI=96)
 ```
@@ -63,19 +57,13 @@ from ironpdf import ChromePdfRenderer
 
 # Create an instance of the PDF renderer
 
-***Based on <https://ironpdf.com/how-to/python-pdf-to-image/>***
-
 renderer = ChromePdfRenderer()
 
 # Generate a PDF from a webpage
 
-***Based on <https://ironpdf.com/how-to/python-pdf-to-image/>***
-
 pdf = renderer.RenderUrlAsPdf("https://www.amazon.com/?tag=hp2-brobookmark-us-20")
 
 # Save each page of the PDF as an image in the specified folder
-
-***Based on <https://ironpdf.com/how-to/python-pdf-to-image/>***
 
 pdf.RasterizeToImageFiles("assets/images/*.png", DPI=96)
 ```
@@ -91,8 +79,6 @@ To customize the image sizes:
 
 ```python
 # Customize the dimensions and DPI for the generated images
-
-***Based on <https://ironpdf.com/how-to/python-pdf-to-image/>***
 
 pdf.RasterizeToImageFiles("assets/images/*.png", ImageMaxWidth=500, ImageMaxHeight=500, DPI=200)
 ```

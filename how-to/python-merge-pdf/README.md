@@ -1,6 +1,6 @@
 # Merge Multiple PDF Files into a Single Document Using IronPDF in Python
 
-***Based on <https://ironpdf.com/how-to/python-merge-pdf/>***
+> Full guide: [Merge Multiple PDF Files into a Single Document Using IronPDF in Python](https://ironpdf.com/how-to/python-merge-pdf/)
 
 
 PDF, or Portable Document Format, is a universally recognized format used to distribute readable documents across various systems and applications seamlessly.
@@ -40,16 +40,12 @@ Consider this code snippet that merges two PDFs:
 ```python
 # HTML content for the first PDF
 
-***Based on <https://ironpdf.com/how-to/python-merge-pdf/>***
-
 html_a = """<p>Welcome to PDF_A</p>
             <p>Detail of the 1st Page</p>
             <div style='page-break-after: always;'></div>
             <p>Detail of the 2nd Page</p>"""
 
 # HTML content for the second PDF
-
-***Based on <https://ironpdf.com/how-to/python-merge-pdf/>***
 
 html_b = """<p>Welcome to PDF_B</p>
             <p>Info on the 1st Page</p>
@@ -58,20 +54,14 @@ html_b = """<p>Welcome to PDF_B</p>
 
 # Initialize the PDF renderer
 
-***Based on <https://ironpdf.com/how-to/python-merge-pdf/>***
-
 renderer = ChromePdfRenderer()
 
 # Convert HTML to PDF
-
-***Based on <https://ironpdf.com/how-to/python-merge-pdf/>***
 
 pdf_a = renderer.RenderHtmlAsPdf(html_a)
 pdf_b = renderer.RenderHtmlAsPdf(html_b)
 
 # Merge the PDF documents
-
-***Based on <https://ironpdf.com/how-to/python-merge-pdf/>***
 
 merged_pdf = PdfDocument.Merge([pdf_a, pdf_b])
 ```
@@ -84,8 +74,6 @@ To save the merged PDF output to your desired file path, use the following code 
 
 ```python
 # Storing the merged PDF document
-
-***Based on <https://ironpdf.com/how-to/python-merge-pdf/>***
 
 merged_pdf.SaveAs("FinalMerged.pdf")
 ```
@@ -110,8 +98,6 @@ Here's how you might implement it:
 ```python
 # HTML content setup for multiple PDFs
 
-***Based on <https://ironpdf.com/how-to/python-merge-pdf/>***
-
 html_c = """<p>Intro to PDF_C</p>
             <p>Overview on the 1st Page</p>
             <div style='page-break-after: always;'></div>
@@ -119,25 +105,17 @@ html_c = """<p>Intro to PDF_C</p>
 
 # Initialize and convert
 
-***Based on <https://ironpdf.com/how-to/python-merge-pdf/>***
-
 pdf_c = renderer.RenderHtmlAsPdf(html_c)
 
 # PDF document array
-
-***Based on <https://ironpdf.com/how-to/python-merge-pdf/>***
 
 pdf_documents = [pdf_a, pdf_b, pdf_c]
 
 # Combine into one PDF
 
-***Based on <https://ironpdf.com/how-to/python-merge-pdf/>***
-
 final_pdf = PdfDocument.Merge(pdf_documents)
 
 # Persist the final merged document
-
-***Based on <https://ironpdf.com/how-to/python-merge-pdf/>***
 
 final_pdf.SaveAs("ComprehensiveMerged.pdf")
 ```

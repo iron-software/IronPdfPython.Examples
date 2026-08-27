@@ -1,6 +1,6 @@
 # IronPDF for Python - Creating, Editing, and Extracting PDFs
 
-***Based on <https://ironpdf.com/docs/docs/>***
+> Docs: [IronPDF for Python documentation](https://ironpdf.com/python/docs/)
 
 
 ## Overview of IronPDF for Python
@@ -40,8 +40,6 @@ Before manipulating PDFs, include IronPDF in your script as follows:
 ```python
 # Import the IronPDF library
 
-***Based on <https://ironpdf.com/docs/docs/>***
-
 from ironpdf import *
 ```
 
@@ -51,8 +49,6 @@ To unlock full features, assign a valid or trial license key to the `LicenseKey`
 
 ```python
 # Set the IronPDF license key
-
-***Based on <https://ironpdf.com/docs/docs/>***
 
 License.LicenseKey = "IRONPDF-MYLICENSE-KEY-1EF01"
 ```
@@ -91,8 +87,6 @@ Activate logging by configuring the following settings:
 
 ```python
 # Configure logging
-
-***Based on <https://ironpdf.com/docs/docs/>***
 
 Logger.EnableDebugging = True
 Logger.LogFilePath = "Default.log"

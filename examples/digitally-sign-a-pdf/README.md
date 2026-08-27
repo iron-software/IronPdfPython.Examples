@@ -1,4 +1,4 @@
-***Based on <https://ironpdf.com/examples/digitally-sign-a-pdf/>***
+> Full guide: [Digitally sign a PDF](https://ironpdf.com/examples/digitally-sign-a-pdf/)
 
 This Python example details the process for cryptographically signing an existing PDF or creating a new one with a digital signature using libraries such as `PyPDF2`.
 

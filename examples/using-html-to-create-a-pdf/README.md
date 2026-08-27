@@ -1,4 +1,4 @@
-***Based on <https://ironpdf.com/examples/using-html-to-create-a-pdf/>***
+> Full guide: [Using HTML to create a PDF](https://ironpdf.com/examples/using-html-to-create-a-pdf/)
 
 This guide demonstrates the powerful feature of HTML to PDF conversion provided by IronPDF for Python.
 

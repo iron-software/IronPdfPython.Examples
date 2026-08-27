@@ -1,6 +1,6 @@
 # Utilizing IronPdfEngine
 
-***Based on <https://ironpdf.com/get-started/use-ironpdfengine/>***
+> Full guide: [Utilizing IronPdfEngine](https://ironpdf.com/python/get-started/use-ironpdfengine/)
 
 
 IronPdfEngine is effectively a gRPC server designed to handle a multitude of tasks related to IronPDF, which include generating, modifying, and accessing PDF files.
@@ -36,13 +36,9 @@ Post-installation, it’s crucial to designate the location of IronPdfEngine. En
 ```python
 # Importing required libraries
 
-***Based on <https://ironpdf.com/get-started/use-ironpdfengine/>***
-
 from ironpdf import Installation, IronPdf
 
 # Setting up the connection to communicate with the remote IronPdfEngine
-
-***Based on <https://ironpdf.com/get-started/use-ironpdfengine/>***
 
 Installation.ConnectToIronPdfHost(
     IronPdf.GrpcLayer.IronPdfConnectionConfiguration.RemoteServer("123.456.7.8:33350")

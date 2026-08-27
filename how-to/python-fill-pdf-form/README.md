@@ -1,6 +1,6 @@
 # Automating PDF Form Filling with Python
 
-***Based on <https://ironpdf.com/how-to/python-fill-pdf-form/>***
+> Full guide: [Automating PDF Form Filling with Python](https://ironpdf.com/how-to/python-fill-pdf-form/)
 
 
 This tutorial focuses on the automated filling of PDF forms using Python. This technique is particularly useful for applications where user interfaces enhance interactions, but there's also a need to electronically generate and archive PDF files.
@@ -32,8 +32,6 @@ from ironpdf import *
 
 # Set up the HTML markup for the form
 
-***Based on <https://ironpdf.com/how-to/python-fill-pdf-form/>***
-
 form_html = """
 <html>
 <body>
@@ -48,31 +46,21 @@ Last name: <br> <input type='text' name='lastname' value=''>
 
 # Create a PDF renderer instance
 
-***Based on <https://ironpdf.com/how-to/python-fill-pdf-form/>***
-
 renderer = ChromePdfRenderer()
 
 # Enable the creation of PDF forms from HTML
-
-***Based on <https://ironpdf.com/how-to/python-fill-pdf-form/>***
 
 renderer.RenderingOptions.CreatePdfFormsFromHtml = True
 
 # Convert the HTML to a PDF and save it
 
-***Based on <https://ironpdf.com/how-to/python-fill-pdf-form/>***
-
 renderer.RenderHtmlAsPdf(form_html).SaveAs("BasicForm.pdf")
 
 # Open the newly created PDF
 
-***Based on <https://ironpdf.com/how-to/python-fill-pdf-form/>***
-
 form_document = PdfDocument.FromFile("BasicForm.pdf")
 
 # Modify the "firstname" field
-
-***Based on <https://ironpdf.com/how-to/python-fill-pdf-form/>***
 
 first_name_field = form_document.Form.FindFormField("firstname")
 first_name_field.Value = "Mickey"
@@ -80,15 +68,11 @@ print("Updated FirstNameField value: {}".format(first_name_field.Value))
 
 # Update the "lastname" field
 
-***Based on <https://ironpdf.com/how-to/python-fill-pdf-form/>***
-
 last_name_field = form_document.Form.FindFormField("lastname")
 last_name_field.Value = "Mouse"
 print("Updated LastNameField value: {}".format(last_name_field.Value))
 
 # Re-save the edited form
-
-***Based on <https://ironpdf.com/how-to/python-fill-pdf-form/>***
 
 form_document.SaveAs("EditedForm.pdf")
 ```

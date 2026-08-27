@@ -1,6 +1,6 @@
 # How to Print PDF Files Using Python
 
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
+> Full guide: [How to Print PDF Files Using Python](https://ironpdf.com/how-to/python-print-pdf/)
 
 
 ## Introduction
@@ -42,13 +42,9 @@ Here’s how to load a PDF from a file:
 ```python
 # Activate your license key for IronPDF
 
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
-
 License.LicenseKey = "Enter-Your-License"
 
 # Open the PDF from a file on the disk
-
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
 
 pdf = PdfDocument.FromFile("MyPdf.pdf")
 ```
@@ -62,8 +58,6 @@ The simplest method uses the `Print` function to automatically print the documen
 ```python
 # Directly print the PDF with default settings
 
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
-
 pdf.Print()
 ```
 
@@ -74,20 +68,14 @@ For greater control over the printing process, IronPDF allows customization of p
 ```python
 # Modify the print settings
 
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
-
 printer_setting = pdf.GetPrintDocument()
 
 # Define the page range for printing
-
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
 
 printer_setting.PrinterSettings.FromPage = 2
 printer_setting.PrinterSettings.ToPage = 4
 
 # Execute printing with the chosen settings
-
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
 
 printer_setting.Print()
 ```
@@ -101,38 +89,26 @@ from ironpdf import *
 
 # Activate your IronPDF license
 
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
-
 License.LicenseKey = "Enter-Your-License"
 
 # Retrieve the PDF from the local storage
-
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
 
 pdf = PdfDocument.FromFile("MyPdf.pdf")
 
 # Automatically print the PDF
 
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
-
 pdf.Print()
 
 # Retrieve and tailor the printing settings
-
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
 
 printer_setting = pdf.GetPrintDocument()
 
 # Specify the page range for printing
 
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
-
 printer_setting.PrinterSettings.FromPage = 2
 printer_setting.PrinterSettings.ToPage = 4
 
 # Print the document with customized settings
-
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
 
 printer_setting.Print()
 ```

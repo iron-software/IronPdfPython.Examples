@@ -1,20 +1,20 @@
 # Generating PDF Files in Python
 
-***Based on <https://ironpdf.com/how-to/python-create-pdf/>***
+> Full guide: [Generating PDF Files in Python](https://ironpdf.com/how-to/python-create-pdf/)
 
 
 Incorporating PDF creation capabilities into your Python applications can significantly enhance functionality, particularly in tasks such as producing invoices, reports, and other documents dynamically.
 
-This guide will demonstrate how to leverage IronPDF in Python scripts to create PDF documents programmatically.
+This guide creates PDF documents programmatically from a Python script with IronPDF.
 
 ## Overview of IronPDF for Python
 
-IronPDF stands out as a robust Python library tailored for generating PDFs from HTML code. It offers intuitive APIs that simplify the generation and modification of PDFs, boasting capabilities such as:
+IronPDF is a Python library that generates PDFs from HTML. Its API covers generation and modification, including:
 
 1. Embedding text, images, and various content types.
 2. Customizing fonts, colors, and managing overall document layout.
 
-IronPDF integrates smoothly with [.NET](https://ironpdf.com/), [Java](https://ironpdf.com/java/), and [Python](https://ironpdf.com/python/), making it a versatile choice for PDF creation across different programming environments.
+IronPDF ships for [.NET](https://ironpdf.com/), [Java](https://ironpdf.com/java/), and [Python](https://ironpdf.com/python/).
 
 Key features of IronPDF include converting file formats, extracting text and data, and securing documents through password encryption.
 
@@ -42,8 +42,6 @@ Include the following import statement at the beginning of your Python script:
 ```python
 # Import IronPDF Python Library
 
-***Based on <https://ironpdf.com/how-to/python-create-pdf/>***
-
 from ironpdf import *
 ```
 
@@ -51,8 +49,6 @@ Next, activate IronPDF by assigning your license key to the `LicenseKey` attribu
 
 ```python
 # Set the IronPDF license key
-
-***Based on <https://ironpdf.com/how-to/python-create-pdf/>***
 
 License.LicenseKey = "IRONPDF-MYLICENSE-KEY-1EF01"
 ```
@@ -66,13 +62,9 @@ Convert HTML markup into a PDF document using the `RenderHtmlAsPdf` method:
 ```python
 # Initialize the PDF Renderer
 
-***Based on <https://ironpdf.com/how-to/python-create-pdf/>***
-
 renderer = ChromePdfRenderer()
 
 # Convert HTML string to PDF
-
-***Based on <https://ironpdf.com/how-to/python-create-pdf/>***
 
 pdf = renderer.RenderHtmlAsPdf("<h1>Hello World!</h1><p>This is an example HTML string.</p>")
 ```
@@ -81,8 +73,6 @@ Then, save the newly created PDF file:
 
 ```python
 # Save the PDF document
-
-***Based on <https://ironpdf.com/how-to/python-create-pdf/>***
 
 pdf.SaveAs("htmlstring_to_pdf.pdf")
 ```
@@ -96,19 +86,13 @@ Convert a local HTML file to a PDF:
 ```python
 # Initialize the PDF Renderer
 
-***Based on <https://ironpdf.com/how-to/python-create-pdf/>***
-
 renderer = ChromePdfRenderer()
 
 # Create a PDF from a local HTML file
 
-***Based on <https://ironpdf.com/how-to/python-create-pdf/>***
-
 pdf = renderer.RenderHtmlFileAsPdf("example.html")
 
 # Save the PDF document
-
-***Based on <https://ironpdf.com/how-to/python-create-pdf/>***
 
 pdf.SaveAs("htmlfile_to_pdf.pdf")
 ```
@@ -122,19 +106,13 @@ Create a PDF from a webpage using `RenderUrlAsPdf`:
 ```python
 # Initialize the PDF Renderer
 
-***Based on <https://ironpdf.com/how-to/python-create-pdf/>***
-
 renderer = ChromePdfRenderer()
 
 # Convert URL to PDF
 
-***Based on <https://ironpdf.com/how-to/python-create-pdf/>***
-
 pdf = renderer.RenderUrlAsPdf("https://ironpdf.com")
 
 # Save the PDF document
-
-***Based on <https://ironpdf.com/how-to/python-create-pdf/>***
 
 pdf.SaveAs("url.pdf")
 ```
@@ -152,19 +130,15 @@ Secure your PDF with a password using `SecuritySettings`:
 ```python
 # Adding password security to a PDF
 
-***Based on <https://ironpdf.com/how-to/python-create-pdf/>***
-
 pdf.SecuritySettings.UserPassword = "sharable"
 
 # Save the protected PDF
-
-***Based on <https://ironpdf.com/how-to/python-create-pdf/>***
 
 pdf.SaveAs("protected.pdf")
 ```
 
 When opened, the PDF will prompt for the password "sharable" to allow access.
 
-The full tutorial source code including password security and other functionalities is encapsulated in the example below, ensuring a comprehensive guide on using IronPDF in Python applications to create and manage PDF documents effectively.
+The example below carries the full tutorial source, password security included.
 
 *[Download the software product.](https://ironpdf.com/downloads/python-create-pdf.zip)*

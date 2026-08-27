@@ -1,4 +1,4 @@
-***Based on <https://ironpdf.com/examples/barcode-htmltopdf/>***
+> Full guide: [Barcode htmltopdf](https://ironpdf.com/examples/barcode-htmltopdf/)
 
 Python developers can integrate barcodes into their PDF documents utilizing IronPDF for Python through two distinct methodologies as detailed below:
 
