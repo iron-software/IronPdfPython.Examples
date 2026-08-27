@@ -6,4 +6,4 @@ license = { file = "LICENSE" }
 readme = "README.md"
 homepage = "https://github.com/iron-software/IronPdfPython.Examples"
 keywords = ["IronPDF for Python", "python", "Python Compress Pdf", "ironpdfpython.examples", "How-To"]
-dependencies = ["ironpdf==2024.11.1.4"]
+dependencies = ["ironpdf==2026.8.0.1"]
