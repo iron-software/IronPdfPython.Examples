@@ -3,7 +3,7 @@
 > Full guide: [HTML to PDF Conversion Using Python](https://ironpdf.com/tutorials/html-to-pdf/)
 
 
-This document provides a comprehensive guide for Python developers on how to leverage the IronPDF library to convert HTML content into PDF documents of superior quality.
+This document provides a guide for Python developers on how to use the IronPDF library to convert HTML content into PDF documents of superior quality.
 
 IronPDF is an extensive library designed for converting and processing PDF documents and supports several programming languages, such as [.NET](https://ironpdf.com/), [Java](https://ironpdf.com/java/), and [Python](https://ironpdf.com/python/). This guide focuses on the Python implementation of IronPDF for transforming HTML code, whether from files or direct HTML strings, into PDFs.
 
@@ -147,4 +147,4 @@ Dive deeper into IronPDF's functionalities:
 
 *You can [download IronPDF here](https://ironpdf.com/downloads/python-extract-text-from-pdf.zip).*
 
-Explore these resources to harness the full potential of PDF generation and manipulation with IronPDF.
+Explore these resources to use the full potential of PDF generation and manipulation with IronPDF.

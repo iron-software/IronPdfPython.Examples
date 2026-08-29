@@ -5,7 +5,7 @@
 
 ## Overview of IronPDF for Python
 
-Iron Software introduces `IronPDF for Python`, a robust tool designed for developers to manage PDF files in Python 3 environments. This library extends the functionalities of the widely-used [IronPDF for .NET](https://ironpdf.com/).
+Iron Software introduces `IronPDF for Python`, a tool designed for developers to manage PDF files in Python 3 environments. This library extends the functionalities of the widely-used [IronPDF for .NET](https://ironpdf.com/).
 
 ## Implementing IronPDF for Python
 
