@@ -1,4 +1,4 @@
-> Full guide: [Converting a URL to a PDF](https://ironpdf.com/examples/converting-a-url-to-a-pdf/)
+> Full guide: [Converting a URL to a PDF](https://ironpdf.com/examples/converting-a-url-to-a-pdf/?utm_source=github)
 
 IronPDF for Python enables the conversion of online webpages into PDF documents.
 
@@ -10,6 +10,6 @@ This approach provides an excellent solution for downloading PDFs from URLs usin
 
 Watch [this instructional video](https://youtu.be/1yIlV74P3Ok) for more insights.
 
-For further customization options of the PDF appearance during the conversion process from HTML, visit the `ChromePdfRenderOptions` [API Reference page](https://ironpdf.com/java/object-reference/api/com/ironsoftware/ironpdf/render/ChromePdfRenderOptions.html).
+For further customization options of the PDF appearance during the conversion process from HTML, visit the `ChromePdfRenderOptions` [API Reference page](https://ironpdf.com/java/object-reference/api/com/ironsoftware/ironpdf/render/ChromePdfRenderOptions.html?utm_source=github).
 
-To explore how to convert HTML to PDF using Python, click [here](https://ironpdf.com/python/tutorials/html-to-pdf/).
+To explore how to convert HTML to PDF using Python, click [here](https://ironpdf.com/python/tutorials/html-to-pdf/?utm_source=github).

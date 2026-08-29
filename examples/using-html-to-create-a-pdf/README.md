@@ -1,4 +1,4 @@
-> Full guide: [Using HTML to create a PDF](https://ironpdf.com/examples/using-html-to-create-a-pdf/)
+> Full guide: [Using HTML to create a PDF](https://ironpdf.com/examples/using-html-to-create-a-pdf/?utm_source=github)
 
 This guide demonstrates the powerful feature of HTML to PDF conversion provided by IronPDF for Python.
 
@@ -6,6 +6,6 @@ Python programmers can employ the `RenderHtmlAsPdf` method to transform HTML con
 
 The `RenderHtmlAsPdf` method requires simply a string of HTML code, which it then converts into a PDF document. It's important to note that this method effectively handles images, iframes, and other elements that link externally within the HTML code. All such elements appear in the resulting PDF files just as they would in a compliant web browser.
 
-Enhance the functionality of your PDFs created with `RenderHtmlAsPdf` by adding custom headers, footers, adjusted margins, and various page configurations. For further details on how to customize these settings, check out [this example on PDF generation settings](https://ironpdf.com/python/examples/pdf-generation-settings/).
+Enhance the functionality of your PDFs created with `RenderHtmlAsPdf` by adding custom headers, footers, adjusted margins, and various page configurations. For further details on how to customize these settings, check out [this example on PDF generation settings](https://ironpdf.com/python/examples/pdf-generation-settings/?utm_source=github).
 
-<a href="https://ironpdf.com/python/tutorials/html-to-pdf/" class="code_content__related-link__doc-cta-link">Learn how to Convert HTML to PDF in Python - Tutorial</a>
+<a href="https://ironpdf.com/python/tutorials/html-to-pdf/?utm_source=github" class="code_content__related-link__doc-cta-link">Learn how to Convert HTML to PDF in Python - Tutorial</a>

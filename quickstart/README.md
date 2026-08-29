@@ -1,11 +1,11 @@
 # IronPDF for Python - Creating, Editing, and Extracting PDFs
 
-> Docs: [IronPDF for Python documentation](https://ironpdf.com/python/docs/)
+> Docs: [IronPDF for Python documentation](https://ironpdf.com/python/docs/?utm_source=github)
 
 
 ## Overview of IronPDF for Python
 
-Iron Software introduces `IronPDF for Python`, a tool designed for developers to manage PDF files in Python 3 environments. This library extends the functionalities of the widely-used [IronPDF for .NET](https://ironpdf.com/).
+Iron Software introduces `IronPDF for Python`, a tool designed for developers to manage PDF files in Python 3 environments. This library extends the functionalities of the widely-used [IronPDF for .NET](https://ironpdf.com/?utm_source=github).
 
 ## Implementing IronPDF for Python
 
@@ -30,8 +30,8 @@ Before starting with `IronPDF for Python`, make sure your system meets the follo
 
 For troubleshooting common issues, refer to these links:
 
-- [Troubleshoot: OSError when installing packages](https://ironpdf.com/python/troubleshooting/could-not-install-package/)
-- [Troubleshoot: Missing IronPdf.Slim.dll](https://ironpdf.com/python/troubleshooting/failed-to-locate-ironpdf/)
+- [Troubleshoot: OSError when installing packages](https://ironpdf.com/python/troubleshooting/could-not-install-package/?utm_source=github)
+- [Troubleshoot: Missing IronPdf.Slim.dll](https://ironpdf.com/python/troubleshooting/failed-to-locate-ironpdf/?utm_source=github)
 
 ## How to Start Coding with IronPDF
 
@@ -95,8 +95,8 @@ Logger.LoggingMode = Logger.LoggingModes.All
 
 ## Licensing & Support Options
 
-Secure a license for production use [here](https://ironpdf.com/python/licensing/). For evaluating, acquire a 30-day trial license [here](https://ironpdf.com/python/trial-license).
+Secure a license for production use [here](https://ironpdf.com/python/licensing/?utm_source=github). For evaluating, acquire a 30-day trial license [here](https://ironpdf.com/python/?utm_source=github#trial-license).
 
-Explore more code samples, tutorials, and detailed documentation at [IronPDF for Python](https://ironpdf.com/python/).
+Explore more code samples, tutorials, and detailed documentation at [IronPDF for Python](https://ironpdf.com/python/?utm_source=github).
 
-Need assistance? Reach out to our support team via our [live chat feature](https://ironpdf.com/#live-chat-support).
+Need assistance? Reach out to our support team via our [live chat feature](https://ironpdf.com/?utm_source=github#live-chat-support).

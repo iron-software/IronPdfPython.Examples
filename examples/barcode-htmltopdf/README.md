@@ -1,4 +1,4 @@
-> Full guide: [Barcode htmltopdf](https://ironpdf.com/examples/barcode-htmltopdf/)
+> Full guide: [Barcode htmltopdf](https://ironpdf.com/examples/barcode-htmltopdf/?utm_source=github)
 
 Python developers can integrate barcodes into their PDF documents utilizing IronPDF for Python through two distinct methodologies as detailed below:
 
@@ -22,8 +22,8 @@ This technique provides more precise control over the barcode's attributes such 
 3. Invoke the `apply_stamp` method on the `PdfDocument` object.
 4. Persist the modified document.
 
-For advanced barcode customization, utilize the [IronBarcode C# Library](https://ironsoftware.com/csharp/barcode/) and apply them to your PDFs with IronPDF for Python's [HtmlStamper](https://ironpdf.com/python/examples/stamping-new-content/).
+For advanced barcode customization, utilize the [IronBarcode C# Library](https://ironsoftware.com/csharp/barcode/?utm_source=github) and apply them to your PDFs with IronPDF for Python's [HtmlStamper](https://ironpdf.com/python/examples/stamping-new-content/?utm_source=github).
 
 - Reminder: In the Python code snippet provided, ensure to replace `ChromePdfRenderer()` and any method names with the corresponding Python library methods and initialize them according to the imports specified at the start of your code.
 
-[Learn how to generate PDFs using IronPDF for Python](https://ironpdf.com/python/how-to/python-create-pdf/)
+[Learn how to generate PDFs using IronPDF for Python](https://ironpdf.com/python/how-to/python-create-pdf/?utm_source=github)

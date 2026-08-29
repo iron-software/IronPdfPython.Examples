@@ -1,4 +1,4 @@
-> Full guide: [Embed image base64](https://ironpdf.com/examples/embed-image-base64/)
+> Full guide: [Embed image base64](https://ironpdf.com/examples/embed-image-base64/?utm_source=github)
 
 IronPDF for Python transforms raw image byte data into PDF documents.
 
@@ -12,4 +12,4 @@ Once your HTML string is ready, utilize the `RenderHtmlAsPdf` function and pass 
 
 IronPDF excels by using HTML as the backbone for layout design. Simply convert your content into valid HTML format and let IronPDF handle the conversion to PDF.
 
-Learn more about creating PDFs using IronPDF for Python by visiting: [Learn to create PDFs with IronPDF for Python today!](https://ironpdf.com/python/how-to/python-create-pdf/).
+Learn more about creating PDFs using IronPDF for Python by visiting: [Learn to create PDFs with IronPDF for Python today!](https://ironpdf.com/python/how-to/python-create-pdf/?utm_source=github).
