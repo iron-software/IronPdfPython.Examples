@@ -1,6 +1,6 @@
 # How to Compress PDF Files in Python
 
-> Full guide: [How to Compress PDF Files in Python](https://ironpdf.com/python/how-to/python-compress-pdf/)
+> Full guide: [How to Compress PDF Files in Python](https://ironpdf.com/python/how-to/python-compress-pdf/?utm_source=github)
 
 
 PDFs are essential for storing and distributing documents, yet their large sizes can be burdensome. This size issue can hinder efficient document sharing and storage management. Fortunately, by using PDF compression methods, you can significantly reduce the size of your PDF files.
@@ -66,4 +66,4 @@ You are encouraged to compare the original and compressed PDFs to see the differ
 
 IronPDF serves as an effective and economical solution for compressing PDFs in Python. It boasts a variety of features, like page manipulation, HTML to PDF conversion, and image compression. IronPDF stands out for developers looking for a budget-friendly PDF compression tool.
 
-Starting at `$liteLicense`, IronPDF presents an economical [licensing option](https://ironpdf.com/python/licensing/), providing access to top-notch software solutions affordably. With its dependable optimization features, IronPDF is perfect for developers requiring simplified PDF compression.
+Starting at `$liteLicense`, IronPDF presents an economical [licensing option](https://ironpdf.com/python/licensing/?utm_source=github), providing access to top-notch software solutions affordably. With its dependable optimization features, IronPDF is perfect for developers requiring simplified PDF compression.

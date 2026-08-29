@@ -1,13 +1,13 @@
 # HTML to PDF Conversion Using Python
 
-> Full guide: [HTML to PDF Conversion Using Python](https://ironpdf.com/tutorials/html-to-pdf/)
+> Full guide: [HTML to PDF Conversion Using Python](https://ironpdf.com/tutorials/html-to-pdf/?utm_source=github)
 
 
 This document provides a guide for Python developers on how to use the IronPDF library to convert HTML content into PDF documents of superior quality.
 
-IronPDF is an extensive library designed for converting and processing PDF documents and supports several programming languages, such as [.NET](https://ironpdf.com/), [Java](https://ironpdf.com/java/), and [Python](https://ironpdf.com/python/). This guide focuses on the Python implementation of IronPDF for transforming HTML code, whether from files or direct HTML strings, into PDFs.
+IronPDF is an extensive library designed for converting and processing PDF documents and supports several programming languages, such as [.NET](https://ironpdf.com/?utm_source=github), [Java](https://ironpdf.com/java/?utm_source=github), and [Python](https://ironpdf.com/python/?utm_source=github). This guide focuses on the Python implementation of IronPDF for transforming HTML code, whether from files or direct HTML strings, into PDFs.
 
-For those interested in .NET implementations, consider checking out the [HTML to PDF conversion in .NET tutorial](https://ironpdf.com/tutorials/html-to-pdf/).
+For those interested in .NET implementations, consider checking out the [HTML to PDF conversion in .NET tutorial](https://ironpdf.com/tutorials/html-to-pdf/?utm_source=github).
 
 ---
 
@@ -141,10 +141,10 @@ IronPDF automatically handles resource loading and integration, ensuring a faith
 
 Dive deeper into IronPDF's functionalities:
 
-- Experiment with [customizing PDF settings](https://ironpdf.com/python/examples/pdf-generation-settings/).
-- Add [personalized headers and footers](https://ironpdf.com/python/examples/html-headers-and-footers/), adjust margins ([IronPDF custom margins](https://ironpdf.com/python/examples/ironpdf-set-custom-margins/)) and set custom page dimensions ([custom paper sizes](https://ironpdf.com/python/examples/custom-pdf-paper-size/)).
-- Additional features like [watermarking](https://ironpdf.com/python/examples/pdf-watermarking/), text extraction ([extract PDF text](https://ironpdf.com/python/examples/extract-pdf-text/)), file size optimization ([PDF compression](https://ironpdf.com/python/examples/pdf-compression/)), and direct printing ([print PDFs with Python](https://ironpdf.com/how-to/python-print-pdf/)).
+- Experiment with [customizing PDF settings](https://ironpdf.com/python/examples/pdf-generation-settings/?utm_source=github).
+- Add [personalized headers and footers](https://ironpdf.com/python/examples/html-headers-and-footers/?utm_source=github), adjust margins ([IronPDF custom margins](https://ironpdf.com/python/examples/ironpdf-set-custom-margins/?utm_source=github)) and set custom page dimensions ([custom paper sizes](https://ironpdf.com/python/examples/custom-pdf-paper-size/?utm_source=github)).
+- Additional features like [watermarking](https://ironpdf.com/python/examples/pdf-watermarking/?utm_source=github), text extraction ([extract PDF text](https://ironpdf.com/python/examples/extract-pdf-text/?utm_source=github)), file size optimization ([PDF compression](https://ironpdf.com/python/examples/pdf-compression/?utm_source=github)), and direct printing ([print PDFs with Python](https://ironpdf.com/how-to/python-print-pdf/?utm_source=github)).
 
-*You can [download IronPDF here](https://ironpdf.com/downloads/python-extract-text-from-pdf.zip).*
+*You can [download IronPDF here](https://ironpdf.com/downloads/python-extract-text-from-pdf.zip?utm_source=github).*
 
 Explore these resources to use the full potential of PDF generation and manipulation with IronPDF.

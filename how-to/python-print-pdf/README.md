@@ -1,6 +1,6 @@
 # How to Print PDF Files Using Python
 
-> Full guide: [How to Print PDF Files Using Python](https://ironpdf.com/python/how-to/python-print-pdf/)
+> Full guide: [How to Print PDF Files Using Python](https://ironpdf.com/python/how-to/python-print-pdf/?utm_source=github)
 
 
 ## Introduction
@@ -13,7 +13,7 @@ Python supports a variety of methods for creating and printing PDFs, with librar
 
 ## IronPDF: Python PDF Library
 
-IronPDF is an advanced Python library designed to create, manipulate, and convert PDF documents. Modeled after its [IronPDF C# .NET counterpart](https://ironsoftware.com/), it brings a rich feature set to the Python environment.
+IronPDF is an advanced Python library designed to create, manipulate, and convert PDF documents. Modeled after its [IronPDF C# .NET counterpart](https://ironsoftware.com/?utm_source=github), it brings a rich feature set to the Python environment.
 
 This library provides a high-level API that simplifies PDF tasks, avoiding the complexities associated with lower-level operations. It includes methods for common PDF tasks such as creating, adding content, formatting text, and splitting or merging documents.
 
@@ -115,6 +115,6 @@ printer_setting.Print()
 
 IronPDF prints PDFs from Python projects. Offering a broad range of features and comprehensive support documentation, it enables users to easily create, customize, and print high-quality PDF documents. IronPDF is ideal for producing everything from invoices to reports.
 
-Utilize IronPDF's free trial in a real-world setting. The [pricing](https://ironpdf.com/python/licensing/) starts from `$liteLicense`. Try the [trial license](https://ironpdf.com#trial-license) to explore how IronPDF can enhance your PDF printing workflow efficiently.
+Utilize IronPDF's free trial in a real-world setting. The [pricing](https://ironpdf.com/python/licensing/?utm_source=github) starts from `$liteLicense`. Try the [trial license](https://ironpdf.com?utm_source=github#trial-license) to explore how IronPDF can enhance your PDF printing workflow efficiently.
 
-*[Download](https://ironpdf.com/downloads/python-print-pdf.zip) the software product.*
+*[Download](https://ironpdf.com/downloads/python-print-pdf.zip?utm_source=github) the software product.*

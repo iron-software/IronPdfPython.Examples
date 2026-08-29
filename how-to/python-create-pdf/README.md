@@ -1,6 +1,6 @@
 # Generating PDF Files in Python
 
-> Full guide: [Generating PDF Files in Python](https://ironpdf.com/python/how-to/python-create-pdf/)
+> Full guide: [Generating PDF Files in Python](https://ironpdf.com/python/how-to/python-create-pdf/?utm_source=github)
 
 
 Incorporating PDF creation capabilities into your Python applications can significantly enhance functionality, particularly in tasks such as producing invoices, reports, and other documents dynamically.
@@ -14,7 +14,7 @@ IronPDF is a Python library that generates PDFs from HTML. Its API covers genera
 1. Embedding text, images, and various content types.
 2. Customizing fonts, colors, and managing overall document layout.
 
-IronPDF ships for [.NET](https://ironpdf.com/), [Java](https://ironpdf.com/java/), and [Python](https://ironpdf.com/python/).
+IronPDF ships for [.NET](https://ironpdf.com/?utm_source=github), [Java](https://ironpdf.com/java/?utm_source=github), and [Python](https://ironpdf.com/python/?utm_source=github).
 
 Key features of IronPDF include converting file formats, extracting text and data, and securing documents through password encryption.
 
@@ -56,7 +56,7 @@ from ironpdf import *
 License.LicenseKey = "IRONPDF-MYLICENSE-KEY-1EF01"
 ```
 
-Obtain a license key by [purchasing](https://ironpdf.com/python/licensing/) or acquiring a [free trial key](https://ironpdf.com/python/licensing/).
+Obtain a license key by [purchasing](https://ironpdf.com/python/licensing/?utm_source=github) or acquiring a [free trial key](https://ironpdf.com/python/licensing/?utm_source=github).
 
 ## HTML String to PDF Conversion
 
@@ -119,11 +119,11 @@ pdf = renderer.RenderUrlAsPdf("https://ironpdf.com")
 pdf.SaveAs("url.pdf")
 ```
 
-More details on web page to PDF conversion can be found [here](https://ironpdf.com/python/examples/converting-a-url-to-a-pdf/).
+More details on web page to PDF conversion can be found [here](https://ironpdf.com/python/examples/converting-a-url-to-a-pdf/?utm_source=github).
 
 ## PDF Formatting Options
 
-Tailor the PDF appearance using the `RenderingOptions` attribute. Change settings like orientation, page size, and margins. Consult the [formatting guide](https://ironpdf.com/python/examples/pdf-generation-settings/) for details.
+Tailor the PDF appearance using the `RenderingOptions` attribute. Change settings like orientation, page size, and margins. Consult the [formatting guide](https://ironpdf.com/python/examples/pdf-generation-settings/?utm_source=github) for details.
 
 ## Adding Password Protection to PDFs
 
@@ -180,4 +180,4 @@ pdf.SecuritySettings.AllowUserCopyPasteContent = False
 pdf.SaveAs("protected.pdf")
 ```
 
-*[Download the software product.](https://ironpdf.com/downloads/python-create-pdf.zip)*
+*[Download the software product.](https://ironpdf.com/downloads/python-create-pdf.zip?utm_source=github)*

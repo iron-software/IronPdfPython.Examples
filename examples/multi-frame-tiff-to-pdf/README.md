@@ -1,4 +1,4 @@
-> Full guide: [Multi frame TIFF to PDF](https://ironpdf.com/examples/multi-frame-tiff-to-pdf/)
+> Full guide: [Multi frame TIFF to PDF](https://ironpdf.com/examples/multi-frame-tiff-to-pdf/?utm_source=github)
 
 IronPDF for Python offers a feature through the `ImageToPdfConverter` class that facilitates the transformation of TIFF images into PDF formats. Specifically, when employing `ImagePdfConverter.ImageToPdf` with a multi-framed TIFF, it distributes each frame across separate PDF pages.
 
@@ -23,4 +23,4 @@ Below is a step-by-step guide on using the `ImageToPdfConverter` to transform a 
 
 To execute this conversion, replace `'path/to/your/tiff_file.tiff'` and `'path/to/output/pdf_document.pdf'` with the actual paths to your files.
 
-[Learn How to Convert PDF to Image with Python](https://ironpdf.com/python/how-to/python-pdf-to-image/)
+[Learn How to Convert PDF to Image with Python](https://ironpdf.com/python/how-to/python-pdf-to-image/?utm_source=github)

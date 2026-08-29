@@ -1,6 +1,6 @@
 # Automating PDF Form Filling with Python
 
-> Full guide: [Automating PDF Form Filling with Python](https://ironpdf.com/python/how-to/python-fill-pdf-form/)
+> Full guide: [Automating PDF Form Filling with Python](https://ironpdf.com/python/how-to/python-fill-pdf-form/?utm_source=github)
 
 
 This tutorial focuses on the automated filling of PDF forms using Python. This technique is particularly useful for applications where user interfaces enhance interactions, but there's also a need to electronically generate and archive PDF files.
@@ -25,7 +25,7 @@ Once installed, IronPDF is ready for use within your Python scripts.
 
 ## Programmatic PDF Form Filling Using Python
 
-The following example demonstrates how to utilize IronPDF to [generate and fill in](https://ironpdf.com/python/examples/form-data/) PDF forms by converting HTML markup into fillable PDF forms. The example starts by importing the necessary modules from IronPDF:
+The following example demonstrates how to utilize IronPDF to [generate and fill in](https://ironpdf.com/python/examples/form-data/?utm_source=github) PDF forms by converting HTML markup into fillable PDF forms. The example starts by importing the necessary modules from IronPDF:
 
 ```python
 from ironpdf import *
@@ -93,4 +93,4 @@ Subsequently, the completed PDF is opened, and specific fields are programmatica
 
 IronPDF proves to be a powerful and reliable PDF library for Python, offering significant abilities to fill PDF forms programmatically—simplifying document processing and automation tasks.
 
-Interested users can start with a free trial of IronPDF, with further usage supported by [various licensing plans](https://ironpdf.com/python/licensing/) starting at `$liteLicense`.
+Interested users can start with a free trial of IronPDF, with further usage supported by [various licensing plans](https://ironpdf.com/python/licensing/?utm_source=github) starting at `$liteLicense`.

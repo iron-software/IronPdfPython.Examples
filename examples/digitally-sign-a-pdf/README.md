@@ -1,4 +1,4 @@
-> Full guide: [Digitally sign a PDF](https://ironpdf.com/examples/digitally-sign-a-pdf/)
+> Full guide: [Digitally sign a PDF](https://ironpdf.com/examples/digitally-sign-a-pdf/?utm_source=github)
 
 This Python example details the process for cryptographically signing an existing PDF or creating a new one with a digital signature using libraries such as `PyPDF2`.
 
@@ -22,4 +22,4 @@ This Python example details the process for cryptographically signing an existin
 
 Note: Implementing a digital signature in a PDF with `reportlab` and `PyPDF2` involves a sophisticated process, possibly requiring multiple libraries. Ensure you are prepared with the appropriate digital certificates and a clear understanding of cryptographic techniques.
 
-[Explore the Digital Signature PDF Example on GitHub](https://ironpdf.com/IronPdfPython.Examples/tree/main/examples/digitally-sign-a-pdf)
+[Explore the Digital Signature PDF Example on GitHub](https://ironpdf.com/IronPdfPython.Examples/tree/main/examples/digitally-sign-a-pdf?utm_source=github)

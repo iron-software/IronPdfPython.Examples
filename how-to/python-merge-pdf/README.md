@@ -1,6 +1,6 @@
 # Merge Multiple PDF Files into a Single Document Using IronPDF in Python
 
-> Full guide: [Merge Multiple PDF Files into a Single Document Using IronPDF in Python](https://ironpdf.com/python/how-to/python-merge-pdf/)
+> Full guide: [Merge Multiple PDF Files into a Single Document Using IronPDF in Python](https://ironpdf.com/python/how-to/python-merge-pdf/?utm_source=github)
 
 
 PDF, or Portable Document Format, is a universally recognized format used to distribute readable documents across various systems and applications.
@@ -33,7 +33,7 @@ pass
 
 ## Python Example: Merging Two PDF Files with IronPDF
 
-We start by [merging PDF](https://ironpdf.com/python/examples/merge-pdfs/) files in two main steps:
+We start by [merging PDF](https://ironpdf.com/python/examples/merge-pdfs/?utm_source=github) files in two main steps:
 1. Creation of the PDF files.
 2. Merging of these files into one resultant PDF document.
 
@@ -85,7 +85,7 @@ The image below illustrates the appearance of the merged PDF document:
 
 <div class="content-img-align-center">
 <div class="center-image-wrapper">
-<a rel="nofollow" href="https://ironpdf.com/static-assets/ironpdf-java/howto/java-merge-pdf/java-merge-pdf-2.webp" target="_blank"><img src="https://ironpdf.com/static-assets/ironpdf-java/howto/java-merge-pdf/java-merge-pdf-2.webp" alt="Example of Merging Two PDF Documents" class="img-responsive add-shadow"></a>
+<a rel="nofollow" href="https://ironpdf.com/static-assets/ironpdf-java/howto/java-merge-pdf/java-merge-pdf-2.webp?utm_source=github" target="_blank"><img src="https://ironpdf.com/static-assets/ironpdf-java/howto/java-merge-pdf/java-merge-pdf-2.webp" alt="Example of Merging Two PDF Documents" class="img-responsive add-shadow"></a>
     <p class="content__image-caption">Example of Merging Two PDF Documents</p>
 </div>
 </div>
@@ -136,7 +136,7 @@ The image below demonstrates the merged document of more than two files:
 
 <div class="content-img-align-center">
 <div class="center-image-wrapper">
-<a rel="nofollow" href="https://ironpdf.com/static-assets/ironpdf-java/howto/java-merge-pdf/java-merge-pdf-3.webp" target="_blank"><img src="https://ironpdf.com/static-assets/ironpdf-java/howto/java-merge-pdf/java-merge-pdf-3.webp" alt="Python Merge PDFs - More Than Two Files" class="img-responsive add-shadow"></a>
+<a rel="nofollow" href="https://ironpdf.com/static-assets/ironpdf-java/howto/java-merge-pdf/java-merge-pdf-3.webp?utm_source=github" target="_blank"><img src="https://ironpdf.com/static-assets/ironpdf-java/howto/java-merge-pdf/java-merge-pdf-3.webp" alt="Python Merge PDFs - More Than Two Files" class="img-responsive add-shadow"></a>
     <p class="content__image-caption">Merging More Than Two PDF Documents</p>
 </div>
 </div>
@@ -147,6 +147,6 @@ This guide explored the process of merging PDF documents using the IronPDF libra
 
 IronPDF offers reliable performance and precision in manipulating PDF documents. Utilizing IronPDF's capabilities can significantly enhance document handling tasks in Python projects.
 
-For deeper insights into using IronPDF, visit the expansive [Code Examples](https://ironpdf.com/python/examples/using-html-to-create-a-pdf/). IronPDF is free for development, with various licensing options available for commercial use. For more details on licensing, refer to this [link](https://ironpdf.com/python/licensing/).
+For deeper insights into using IronPDF, visit the expansive [Code Examples](https://ironpdf.com/python/examples/using-html-to-create-a-pdf/?utm_source=github). IronPDF is free for development, with various licensing options available for commercial use. For more details on licensing, refer to this [link](https://ironpdf.com/python/licensing/?utm_source=github).
 
-*[Download the software product here.](https://ironpdf.com/downloads/python-merge-pdf.zip)*
+*[Download the software product here.](https://ironpdf.com/downloads/python-merge-pdf.zip?utm_source=github)*

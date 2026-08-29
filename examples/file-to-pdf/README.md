@@ -1,4 +1,4 @@
-> Full guide: [File to PDF](https://ironpdf.com/examples/file-to-pdf/)
+> Full guide: [File to PDF](https://ironpdf.com/examples/file-to-pdf/?utm_source=github)
 
 Transform a complete HTML file into a precise PDF using IronPDF for Python's `RenderHtmlFileAsPdf` method.
 
@@ -18,6 +18,6 @@ Below is a basic guide on how to implement this method:
 
 ### Customizing the PDF Output
 
-The `ChromePdfRenderer` provides several customization choices that include adjusting headers, footers, margins, and adding page numbers or backgrounds. For further details on advanced functionalities and custom options, refer to [this code example](https://ironpdf.com/python/examples/pdf-generation-settings/) and learn how to [tailor your PDF settings](https://ironpdf.com/python/examples/pdf-generation-settings/).
+The `ChromePdfRenderer` provides several customization choices that include adjusting headers, footers, margins, and adding page numbers or backgrounds. For further details on advanced functionalities and custom options, refer to [this code example](https://ironpdf.com/python/examples/pdf-generation-settings/?utm_source=github) and learn how to [tailor your PDF settings](https://ironpdf.com/python/examples/pdf-generation-settings/?utm_source=github).
 
-[Explore converting HTML to PDF with this comprehensive tutorial!](https://ironpdf.com/python/tutorials/html-to-pdf/)
+[Explore converting HTML to PDF with this comprehensive tutorial!](https://ironpdf.com/python/tutorials/html-to-pdf/?utm_source=github)
