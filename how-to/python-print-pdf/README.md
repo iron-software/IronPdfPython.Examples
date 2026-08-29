@@ -1,6 +1,6 @@
 # How to Print PDF Files Using Python
 
-> Full guide: [How to Print PDF Files Using Python](https://ironpdf.com/how-to/python-print-pdf/)
+> Full guide: [How to Print PDF Files Using Python](https://ironpdf.com/python/how-to/python-print-pdf/)
 
 
 ## Introduction

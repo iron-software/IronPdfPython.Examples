@@ -1,6 +1,6 @@
 # Automating PDF Form Filling with Python
 
-> Full guide: [Automating PDF Form Filling with Python](https://ironpdf.com/how-to/python-fill-pdf-form/)
+> Full guide: [Automating PDF Form Filling with Python](https://ironpdf.com/python/how-to/python-fill-pdf-form/)
 
 
 This tutorial focuses on the automated filling of PDF forms using Python. This technique is particularly useful for applications where user interfaces enhance interactions, but there's also a need to electronically generate and archive PDF files.

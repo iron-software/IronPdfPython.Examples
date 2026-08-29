@@ -1,6 +1,6 @@
 # Merge Multiple PDF Files into a Single Document Using IronPDF in Python
 
-> Full guide: [Merge Multiple PDF Files into a Single Document Using IronPDF in Python](https://ironpdf.com/how-to/python-merge-pdf/)
+> Full guide: [Merge Multiple PDF Files into a Single Document Using IronPDF in Python](https://ironpdf.com/python/how-to/python-merge-pdf/)
 
 
 PDF, or Portable Document Format, is a universally recognized format used to distribute readable documents across various systems and applications.

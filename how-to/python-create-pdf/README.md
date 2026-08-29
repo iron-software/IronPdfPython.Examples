@@ -1,6 +1,6 @@
 # Generating PDF Files in Python
 
-> Full guide: [Generating PDF Files in Python](https://ironpdf.com/how-to/python-create-pdf/)
+> Full guide: [Generating PDF Files in Python](https://ironpdf.com/python/how-to/python-create-pdf/)
 
 
 Incorporating PDF creation capabilities into your Python applications can significantly enhance functionality, particularly in tasks such as producing invoices, reports, and other documents dynamically.
@@ -145,6 +145,39 @@ pdf.SaveAs("protected.pdf")
 
 When opened, the PDF will prompt for the password "sharable" to allow access.
 
-The example below carries the full tutorial source, password security included.
+## Complete Source Code
+
+The listing below carries the full tutorial source, password security included.
+
+```python
+from ironpdf import *
+
+# Apply your license key
+License.LicenseKey = "IRONPDF-MYLICENSE-KEY-1EF01"
+
+# --- HTML string to PDF ---
+renderer = ChromePdfRenderer()
+pdf = renderer.RenderHtmlAsPdf("<h1>Hello World!</h1><p>This is an example HTML string.</p>")
+pdf.SaveAs("htmlstring_to_pdf.pdf")
+
+# --- Local HTML file to PDF ---
+renderer = ChromePdfRenderer()
+pdf = renderer.RenderHtmlFileAsPdf("example.html")
+pdf.SaveAs("htmlfile_to_pdf.pdf")
+
+# --- URL to PDF ---
+renderer = ChromePdfRenderer()
+pdf = renderer.RenderUrlAsPdf("https://ironpdf.com")
+pdf.SaveAs("url.pdf")
+
+# --- Password-protected PDF ---
+pdf.SecuritySettings.UserPassword = "sharable"
+pdf.SecuritySettings.OwnerPassword = "admin123"
+# The guide writes `AllowUserPrinting = True`. It is a PdfPrintSecurity
+# enum, not a bool, and assigning True raises TypeError under Python.NET 3.
+pdf.SecuritySettings.AllowUserPrinting = PdfPrintSecurity.FullPrintRights
+pdf.SecuritySettings.AllowUserCopyPasteContent = False
+pdf.SaveAs("protected.pdf")
+```
 
 *[Download the software product.](https://ironpdf.com/downloads/python-create-pdf.zip)*

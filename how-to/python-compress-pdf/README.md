@@ -1,6 +1,6 @@
 # How to Compress PDF Files in Python
 
-> Full guide: [How to Compress PDF Files in Python](https://ironpdf.com/how-to/python-compress-pdf/)
+> Full guide: [How to Compress PDF Files in Python](https://ironpdf.com/python/how-to/python-compress-pdf/)
 
 
 PDFs are essential for storing and distributing documents, yet their large sizes can be burdensome. This size issue can hinder efficient document sharing and storage management. Fortunately, by using PDF compression methods, you can significantly reduce the size of your PDF files.
