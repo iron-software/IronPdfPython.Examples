@@ -1,6 +1,6 @@
 # How to Compress PDF Files in Python
 
-***Based on <https://ironpdf.com/how-to/python-compress-pdf/>***
+> Full guide: [How to Compress PDF Files in Python](https://ironpdf.com/python/how-to/python-compress-pdf/)
 
 
 PDFs are essential for storing and distributing documents, yet their large sizes can be burdensome. This size issue can hinder efficient document sharing and storage management. Fortunately, by using PDF compression methods, you can significantly reduce the size of your PDF files.
@@ -32,20 +32,14 @@ from ironpdf import PdfDocument
 
 # Open the PDF document from a specified location
 
-***Based on <https://ironpdf.com/how-to/python-compress-pdf/>***
-
 pdf = PdfDocument("Image based PDF.pdf")
 
 # Compress the PDF images while setting a lower quality value at 60 (max is 100) for increased compression
-
-***Based on <https://ironpdf.com/how-to/python-compress-pdf/>***
 
 pdf.CompressImages(60)
 pdf.SaveAs("document_compressed.pdf")
 
 # A different approach is chosen here by applying both compression and downscaling resolution based on visibility
-
-***Based on <https://ironpdf.com/how-to/python-compress-pdf/>***
 
 pdf.CompressImages(90, True)
 pdf.SaveAs("Compressed.pdf")
@@ -70,6 +64,6 @@ You are encouraged to compare the original and compressed PDFs to see the differ
 
 ## Conclusion
 
-IronPDF serves as an effective and economical solution for compressing PDFs in Python. It boasts a variety of features, like page manipulation, HTML to PDF conversion, and image compression. IronPDF stands out for developers looking for a robust and budget-friendly PDF compression tool.
+IronPDF serves as an effective and economical solution for compressing PDFs in Python. It boasts a variety of features, like page manipulation, HTML to PDF conversion, and image compression. IronPDF stands out for developers looking for a budget-friendly PDF compression tool.
 
-Starting at `$liteLicense`, IronPDF presents an economical [licensing option](https://ironpdf.com/python/licensing/), providing access to top-notch software solutions affordably. With its dependable optimization features, IronPDF is perfect for developers requiring streamlined PDF compression.
+Starting at `$liteLicense`, IronPDF presents an economical [licensing option](https://ironpdf.com/python/licensing/), providing access to top-notch software solutions affordably. With its dependable optimization features, IronPDF is perfect for developers requiring simplified PDF compression.

@@ -1,4 +1,4 @@
-***Based on <https://ironpdf.com/examples/file-to-pdf/>***
+> Full guide: [File to PDF](https://ironpdf.com/examples/file-to-pdf/)
 
 Transform a complete HTML file into a precise PDF using IronPDF for Python's `RenderHtmlFileAsPdf` method.
 

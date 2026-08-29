@@ -1,9 +1,9 @@
 [project]
-name = "File To Pdf"
+name = "ironpdf-python-file-to-pdf"
 version = "1.0.0"
 description = "Code examples demonstrating IronPDF for Python Feature: File To Pdf"
 license = { file = "LICENSE" }
 readme = "README.md"
 homepage = "https://github.com/iron-software/IronPdfPython.Examples"
 keywords = ["IronPDF for Python", "python", "File To Pdf", "ironpdfpython.examples", "Code Example"]
-dependencies = ["ironpdf==2024.11.1.4"]
+dependencies = ["ironpdf==2026.8.0.1"]

@@ -1,6 +1,6 @@
 # Licensing IronPDF for Python Projects
 
-***Based on <https://ironpdf.com/get-started/license-keys/>***
+> Full guide: [Licensing IronPDF for Python Projects](https://ironpdf.com/get-started/license-keys/)
 
 
 ## Acquiring a License Key
@@ -30,8 +30,6 @@ from ironpdf import License
 
 # Setting the license key
 
-***Based on <https://ironpdf.com/get-started/license-keys/>***
-
 License.LicenseKey = "IRONPDF-MYLICENSE-KEY-1EF01"
 ```
 
@@ -46,8 +44,6 @@ from ironpdf import License
 
 # Verify the license application
 
-***Based on <https://ironpdf.com/get-started/license-keys/>***
-
 is_licensed = License.IsLicensed
 ```
 
@@ -59,8 +55,6 @@ To validate your license or trial key, you can employ the following code:
 from ironpdf import License
 
 # Validate the provided license key
-
-***Based on <https://ironpdf.com/get-started/license-keys/>***
 
 is_valid = License.IsValidLicense("IRONPDF-MYLICENSE-KEY-1EF01")
 ```

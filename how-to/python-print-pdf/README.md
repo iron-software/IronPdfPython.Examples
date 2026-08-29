@@ -1,6 +1,6 @@
 # How to Print PDF Files Using Python
 
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
+> Full guide: [How to Print PDF Files Using Python](https://ironpdf.com/python/how-to/python-print-pdf/)
 
 
 ## Introduction
@@ -31,6 +31,8 @@ Incorporate IronPDF by adding this line to your script:
 
 ```python
 from ironpdf import *
+
+pass
 ```
 
 ## Load a PDF
@@ -40,16 +42,11 @@ IronPDF provides a handy function to load PDFs from various sources like byte ar
 Here’s how to load a PDF from a file:
 
 ```python
-# Activate your license key for IronPDF
+from ironpdf import *
 
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
-
+# Set your license key to use IronPDF
 License.LicenseKey = "Enter-Your-License"
-
-# Open the PDF from a file on the disk
-
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
-
+# Load the PDF file from the filesystem
 pdf = PdfDocument.FromFile("MyPdf.pdf")
 ```
 
@@ -60,10 +57,14 @@ There are two approaches to printing PDFs with IronPDF.
 The simplest method uses the `Print` function to automatically print the document with the default settings on the default printer:
 
 ```python
-# Directly print the PDF with default settings
+from ironpdf import *
 
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
+# The guide loads a PDF before this snippet; load one here so the example
+# runs on its own.
+License.LicenseKey = "Enter-Your-License"
+pdf = PdfDocument.FromFile("MyPdf.pdf")
 
+# Print the PDF using default settings
 pdf.Print()
 ```
 
@@ -72,23 +73,19 @@ pdf.Print()
 For greater control over the printing process, IronPDF allows customization of print settings. The `GetPrintDocument` function provides a **PrintDocument** object where you can modify its **PrinterSettings**.
 
 ```python
-# Modify the print settings
+from ironpdf import *
 
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
+# The guide loads a PDF before this snippet; load one here so the example
+# runs on its own.
+License.LicenseKey = "Enter-Your-License"
+pdf = PdfDocument.FromFile("MyPdf.pdf")
 
+# Access and modify the print settings
 printer_setting = pdf.GetPrintDocument()
-
-# Define the page range for printing
-
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
-
+# Set the range of pages to print
 printer_setting.PrinterSettings.FromPage = 2
 printer_setting.PrinterSettings.ToPage = 4
-
-# Execute printing with the chosen settings
-
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
-
+# Print with the customized settings
 printer_setting.Print()
 ```
 
@@ -99,47 +96,24 @@ Below is the full source code used in this guide.
 ```python
 from ironpdf import *
 
-# Activate your IronPDF license
-
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
-
+# Set your license key to use IronPDF
 License.LicenseKey = "Enter-Your-License"
-
-# Retrieve the PDF from the local storage
-
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
-
+# Load the PDF file from the filesystem
 pdf = PdfDocument.FromFile("MyPdf.pdf")
-
-# Automatically print the PDF
-
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
-
+# Print the PDF using default settings
 pdf.Print()
-
-# Retrieve and tailor the printing settings
-
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
-
+# Access and modify the print settings
 printer_setting = pdf.GetPrintDocument()
-
-# Specify the page range for printing
-
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
-
+# Set the range of pages to print
 printer_setting.PrinterSettings.FromPage = 2
 printer_setting.PrinterSettings.ToPage = 4
-
-# Print the document with customized settings
-
-***Based on <https://ironpdf.com/how-to/python-print-pdf/>***
-
+# Print the document with the customized settings
 printer_setting.Print()
 ```
 
 ## Summary
 
-IronPDF stands out as a robust, intuitive library that streamlines the printing of PDFs in Python projects. Offering a broad range of features and comprehensive support documentation, it enables users to easily create, customize, and print high-quality PDF documents. IronPDF is ideal for producing everything from invoices to reports.
+IronPDF prints PDFs from Python projects. Offering a broad range of features and comprehensive support documentation, it enables users to easily create, customize, and print high-quality PDF documents. IronPDF is ideal for producing everything from invoices to reports.
 
 Utilize IronPDF's free trial in a real-world setting. The [pricing](https://ironpdf.com/python/licensing/) starts from `$liteLicense`. Try the [trial license](https://ironpdf.com#trial-license) to explore how IronPDF can enhance your PDF printing workflow efficiently.
 

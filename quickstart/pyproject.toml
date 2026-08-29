@@ -1,9 +1,9 @@
 [project]
-name = "Quickstart"
+name = "ironpdf-python-quickstart"
 version = "1.0.0"
 description = "Code examples demonstrating IronPDF for Python Feature: Quickstart"
 license = { file = "LICENSE" }
 readme = "README.md"
 homepage = "https://github.com/iron-software/IronPdfPython.Examples"
 keywords = ["IronPDF for Python", "python", "Quickstart", "ironpdfpython.examples", "Introduction"]
-dependencies = ["ironpdf==2024.11.1.4"]
+dependencies = ["ironpdf==2026.8.0.1"]

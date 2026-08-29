@@ -1,9 +1,9 @@
 [project]
-name = "Python Pdf To Image"
+name = "ironpdf-python-pdf-to-image"
 version = "1.0.0"
 description = "Code examples demonstrating IronPDF for Python Feature: Python Pdf To Image"
 license = { file = "LICENSE" }
 readme = "README.md"
 homepage = "https://github.com/iron-software/IronPdfPython.Examples"
 keywords = ["IronPDF for Python", "python", "Python Pdf To Image", "ironpdfpython.examples", "How-To"]
-dependencies = ["ironpdf==2024.11.1.4"]
+dependencies = ["ironpdf==2026.8.0.1"]

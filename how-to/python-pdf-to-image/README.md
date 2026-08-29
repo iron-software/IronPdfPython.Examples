@@ -1,15 +1,15 @@
 # Python PDF to Image Conversion
 
-***Based on <https://ironpdf.com/how-to/python-pdf-to-image/>***
+> Full guide: [Python PDF to Image Conversion](https://ironpdf.com/python/how-to/python-pdf-to-image/)
 
 
 ## 1. Introduction
 
-When developing software, one common task is converting PDF pages or full documents into image formats like JPEG, PNG, or TIFF. This may be necessary for scenarios where an image representation of a PDF page is required. Taking screenshots manually for this purpose can be cumbersome and inefficient. In Python projects that need automated conversion of PDFs to images, typical Python solutions might not suffice. Here, [IronPDF for Python](https://ironpdf.com/python/) steps in, providing robust and streamlined capabilities for turning PDFs into images.
+When developing software, one common task is converting PDF pages or full documents into image formats like JPEG, PNG, or TIFF. This may be necessary for scenarios where an image representation of a PDF page is required. Taking screenshots manually for this purpose can be cumbersome and inefficient. In Python projects that need automated conversion of PDFs to images, typical Python solutions might not suffice. Here, [IronPDF for Python](https://ironpdf.com/python/) steps in, providing simplified capabilities for turning PDFs into images.
 
 ## 2. IronPDF for Python
 
-[IronPDF](https://ironpdf.com/python/) for Python is packed with features not only for PDF creation and editing without Adobe Acrobat but also for high-performance tasks in Python applications. It allows developers to create and modify PDF files seamlessly, add custom headers and footers, apply security features like encryption and digital signatures, and support asynchronous processing and multithreading.
+[IronPDF](https://ironpdf.com/python/) for Python is packed with features not only for PDF creation and editing without Adobe Acrobat but also for high-performance tasks in Python applications. It allows developers to create and modify PDF files, add custom headers and footers, apply security features like encryption and digital signatures, and support asynchronous processing and multithreading.
 
 Next, we will discuss how to transform PDF documents into popular image formats such as JPEG and PNG using IronPDF in Python.
 
@@ -27,19 +27,9 @@ Below is an example of how you can convert a whole PDF document into images:
 from ironpdf import PdfDocument
 
 # Load the PDF document
-
-***Based on <https://ironpdf.com/how-to/python-pdf-to-image/>***
-
 pdf = PdfDocument.FromFile("my-content.pdf")
-
-# Convert each page to an image file in the specified directory
-
-***Based on <https://ironpdf.com/how-to/python-pdf-to-image/>***
-
-# Make sure "assets/images" directory exists before running this script
-
-***Based on <https://ironpdf.com/how-to/python-pdf-to-image/>***
-
+# Extract all pages to a folder as image files
+# Ensure the directory "assets/images" exists before executing the code
 pdf.RasterizeToImageFiles("assets/images/*.png", DPI=96)
 ```
 
@@ -61,22 +51,11 @@ For instance, consider rendering a web page from Amazon into a PDF, then saving 
 ```python
 from ironpdf import ChromePdfRenderer
 
-# Create an instance of the PDF renderer
-
-***Based on <https://ironpdf.com/how-to/python-pdf-to-image/>***
-
+# Instantiate the PDF renderer
 renderer = ChromePdfRenderer()
-
-# Generate a PDF from a webpage
-
-***Based on <https://ironpdf.com/how-to/python-pdf-to-image/>***
-
+# Create a PDF from a URL or local file path
 pdf = renderer.RenderUrlAsPdf("https://www.amazon.com/?tag=hp2-brobookmark-us-20")
-
-# Save each page of the PDF as an image in the specified folder
-
-***Based on <https://ironpdf.com/how-to/python-pdf-to-image/>***
-
+# Extract all pages to a folder as image files
 pdf.RasterizeToImageFiles("assets/images/*.png", DPI=96)
 ```
 
@@ -90,10 +69,14 @@ pdf.RasterizeToImageFiles("assets/images/*.png", DPI=96)
 To customize the image sizes:
 
 ```python
-# Customize the dimensions and DPI for the generated images
+from ironpdf import *
 
-***Based on <https://ironpdf.com/how-to/python-pdf-to-image/>***
+# The guide renders a PDF before this snippet; render one here so the
+# example runs on its own.
+renderer = ChromePdfRenderer()
+pdf = renderer.RenderUrlAsPdf("https://ironpdf.com")
 
+# Generate images with specified maximum dimensions and DPI
 pdf.RasterizeToImageFiles("assets/images/*.png", ImageMaxWidth=500, ImageMaxHeight=500, DPI=200)
 ```
 
