@@ -41,15 +41,18 @@ Include the following import statement at the beginning of your Python script:
 
 ```python
 # Import IronPDF Python Library
-
+# This snippet is the import statement itself; the sections that follow use it.
 from ironpdf import *
+
+pass
 ```
 
 Next, activate IronPDF by assigning your license key to the `LicenseKey` attribute of `License`:
 
 ```python
-# Set the IronPDF license key
+from ironpdf import *
 
+# Apply your license key
 License.LicenseKey = "IRONPDF-MYLICENSE-KEY-1EF01"
 ```
 
@@ -60,20 +63,25 @@ Obtain a license key by [purchasing](https://ironpdf.com/python/licensing/) or a
 Convert HTML markup into a PDF document using the `RenderHtmlAsPdf` method:
 
 ```python
-# Initialize the PDF Renderer
+from ironpdf import *
 
+# Instantiate Renderer
 renderer = ChromePdfRenderer()
-
-# Convert HTML string to PDF
-
+# Create a PDF from an HTML string using Python
 pdf = renderer.RenderHtmlAsPdf("<h1>Hello World!</h1><p>This is an example HTML string.</p>")
 ```
 
 Then, save the newly created PDF file:
 
 ```python
-# Save the PDF document
+from ironpdf import *
 
+# The guide renders a PDF before this snippet; render one here so the
+# example runs on its own.
+renderer = ChromePdfRenderer()
+pdf = renderer.RenderHtmlAsPdf("<h1>Hello World!</h1><p>This is an example HTML string.</p>")
+
+# Export to a file or Stream
 pdf.SaveAs("htmlstring_to_pdf.pdf")
 ```
 
@@ -84,16 +92,13 @@ The saved file, `"htmlstring_to_pdf.pdf"`, retains the HTML content it was gener
 Convert a local HTML file to a PDF:
 
 ```python
-# Initialize the PDF Renderer
+from ironpdf import *
 
+# Instantiate Renderer
 renderer = ChromePdfRenderer()
-
-# Create a PDF from a local HTML file
-
+# Create a PDF from an existing HTML file using Python
 pdf = renderer.RenderHtmlFileAsPdf("example.html")
-
-# Save the PDF document
-
+# Export to a file or Stream
 pdf.SaveAs("htmlfile_to_pdf.pdf")
 ```
 
@@ -104,16 +109,13 @@ IronPDF processes the HTML content—rendering styles and scripts like a browser
 Create a PDF from a webpage using `RenderUrlAsPdf`:
 
 ```python
-# Initialize the PDF Renderer
+from ironpdf import *
 
+# Instantiate Renderer
 renderer = ChromePdfRenderer()
-
-# Convert URL to PDF
-
+# Create a PDF from a URL or local file path
 pdf = renderer.RenderUrlAsPdf("https://ironpdf.com")
-
-# Save the PDF document
-
+# Export to a file or Stream
 pdf.SaveAs("url.pdf")
 ```
 
@@ -128,12 +130,16 @@ Tailor the PDF appearance using the `RenderingOptions` attribute. Change setting
 Secure your PDF with a password using `SecuritySettings`:
 
 ```python
-# Adding password security to a PDF
+from ironpdf import *
 
+# The guide renders a PDF before this snippet; render one here so the
+# example runs on its own.
+renderer = ChromePdfRenderer()
+pdf = renderer.RenderUrlAsPdf("https://ironpdf.com")
+
+# Set user password for PDF document security
 pdf.SecuritySettings.UserPassword = "sharable"
-
-# Save the protected PDF
-
+# Save the password-protected PDF
 pdf.SaveAs("protected.pdf")
 ```
 

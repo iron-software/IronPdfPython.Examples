@@ -27,15 +27,23 @@ pip install ironpdf
 Post-installation, it’s crucial to designate the location of IronPdfEngine. Ensure that the specified server address is accessible and not obstructed by any firewall. The connection settings can be configured via the `IronPdfConnectionConfiguration` class. It’s advisable to add this configuration at the beginning of your application or right before utilizing any IronPdf functionalities.
 
 ```python
-# Importing required libraries
+import clr
 
-from ironpdf import Installation, IronPdf
+clr.AddReference("IronPdf")
+from IronPdf.GrpcLayer import IronPdfConnectionConfiguration
+from ironpdf import Installation
 
-# Setting up the connection to communicate with the remote IronPdfEngine
+# The guide writes this as `from ironpdf import Installation, IronPdf` and
+# then `IronPdf.GrpcLayer.IronPdfConnectionConfiguration`. The ironpdf
+# module exports no `IronPdf` attribute, so that import raises ImportError;
+# the .NET namespace is reached through clr, as above.
+#
+# RemoteServer takes the host on its own. Passing "host:port" leaves Port
+# at 0 and the engine dials "123.456.7.8:33350:0", an invalid URI.
+configuration = IronPdfConnectionConfiguration.RemoteServer("123.456.7.8")
+configuration.Port = 33350
 
-Installation.ConnectToIronPdfHost(
-    IronPdf.GrpcLayer.IronPdfConnectionConfiguration.RemoteServer("123.456.7.8:33350")
-)
+Installation.ConnectToIronPdfHost(configuration)
 ```
 
 With these steps, your application will be all set to connect with the Remote IronPdfEngine!

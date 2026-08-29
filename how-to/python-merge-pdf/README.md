@@ -27,6 +27,8 @@ In your Python scripts, include IronPDF by importing its functionalities as foll
 
 ```python
 from ironpdf import *
+
+pass
 ```
 
 ## Python Example: Merging Two PDF Files with IronPDF
@@ -38,32 +40,25 @@ We start by [merging PDF](https://ironpdf.com/python/examples/merge-pdfs/) files
 Consider this code snippet that merges two PDFs:
 
 ```python
+from ironpdf import *
+
 # HTML content for the first PDF
-
-html_a = """<p>Welcome to PDF_A</p>
-            <p>Detail of the 1st Page</p>
+html_a = """<p> [PDF_A] </p>
+            <p> [PDF_A] 1st Page </p>
             <div style='page-break-after: always;'></div>
-            <p>Detail of the 2nd Page</p>"""
-
+            <p> [PDF_A] 2nd Page</p>"""
 # HTML content for the second PDF
-
-html_b = """<p>Welcome to PDF_B</p>
-            <p>Info on the 1st Page</p>
+html_b = """<p> [PDF_B] </p>
+            <p> [PDF_B] 1st Page </p>
             <div style='page-break-after: always;'></div>
-            <p>Info on the 2nd Page</p>"""
-
-# Initialize the PDF renderer
-
+            <p> [PDF_B] 2nd Page</p>"""
+# Initialize ChromePdfRenderer
 renderer = ChromePdfRenderer()
-
-# Convert HTML to PDF
-
-pdf_a = renderer.RenderHtmlAsPdf(html_a)
-pdf_b = renderer.RenderHtmlAsPdf(html_b)
-
+# Convert HTML to PDF documents
+pdfdoc_a = renderer.RenderHtmlAsPdf(html_a)
+pdfdoc_b = renderer.RenderHtmlAsPdf(html_b)
 # Merge the PDF documents
-
-merged_pdf = PdfDocument.Merge([pdf_a, pdf_b])
+merged = PdfDocument.Merge([pdfdoc_a, pdfdoc_b])
 ```
 
 In this example, HTML content is designed for two separate pages. The `RenderHtmlAsPdf` function from IronPDF transforms this HTML into individual PDF files, `PdfDocument` objects. These are then combined into one new `PdfDocument` using the `PdfDocument.Merge` function.
@@ -73,9 +68,17 @@ In this example, HTML content is designed for two separate pages. The `RenderHtm
 To save the merged PDF output to your desired file path, use the following code line:
 
 ```python
-# Storing the merged PDF document
+from ironpdf import *
 
-merged_pdf.SaveAs("FinalMerged.pdf")
+# The guide merges two documents before this snippet; build the merged
+# document here so the example runs on its own.
+renderer = ChromePdfRenderer()
+pdfdoc_a = renderer.RenderHtmlAsPdf("<p> [PDF_A] 1st Page </p>")
+pdfdoc_b = renderer.RenderHtmlAsPdf("<p> [PDF_B] 1st Page </p>")
+merged = PdfDocument.Merge([pdfdoc_a, pdfdoc_b])
+
+# Save the merged PDF document
+merged.SaveAs("Merged.pdf")
 ```
 
 The image below illustrates the appearance of the merged PDF document:
@@ -96,28 +99,35 @@ For merging more than two PDF files using IronPDF in Python, follow these steps:
 Here's how you might implement it:
 
 ```python
-# HTML content setup for multiple PDFs
+from ironpdf import *
 
-html_c = """<p>Intro to PDF_C</p>
-            <p>Overview on the 1st Page</p>
+# HTML content for the first PDF
+html_a = """<p> [PDF_A] </p>
+            <p> [PDF_A] 1st Page </p>
             <div style='page-break-after: always;'></div>
-            <p>Overview on the 2nd Page</p>"""
-
-# Initialize and convert
-
-pdf_c = renderer.RenderHtmlAsPdf(html_c)
-
-# PDF document array
-
-pdf_documents = [pdf_a, pdf_b, pdf_c]
-
-# Combine into one PDF
-
-final_pdf = PdfDocument.Merge(pdf_documents)
-
-# Persist the final merged document
-
-final_pdf.SaveAs("ComprehensiveMerged.pdf")
+            <p> [PDF_A] 2nd Page</p>"""
+# HTML content for the second PDF
+html_b = """<p> [PDF_B] </p>
+            <p> [PDF_B] 1st Page </p>
+            <div style='page-break-after: always;'></div>
+            <p> [PDF_B] 2nd Page</p>"""
+# HTML content for the third PDF
+html_c = """<p> [PDF_C] </p>
+            <p> [PDF_C] 1st Page </p>
+            <div style='page-break-after: always;'></div>
+            <p> [PDF_C] 2nd Page</p>"""
+# Initialize ChromePdfRenderer
+renderer = ChromePdfRenderer()
+# Convert HTML to PDF documents
+pdfdoc_a = renderer.RenderHtmlAsPdf(html_a)
+pdfdoc_b = renderer.RenderHtmlAsPdf(html_b)
+pdfdoc_c = renderer.RenderHtmlAsPdf(html_c)
+# List of PDF documents to merge
+pdfs = [pdfdoc_a, pdfdoc_b, pdfdoc_c]
+# Merge the list of PDFs into a single PDF
+pdf = PdfDocument.Merge(pdfs)
+# Save the merged PDF document
+pdf.SaveAs("merged.pdf")
 ```
 
 In this instance, three PDF files are produced and subsequently merged into a single document.

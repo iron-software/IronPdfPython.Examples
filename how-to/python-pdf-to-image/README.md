@@ -27,13 +27,9 @@ Below is an example of how you can convert a whole PDF document into images:
 from ironpdf import PdfDocument
 
 # Load the PDF document
-
 pdf = PdfDocument.FromFile("my-content.pdf")
-
-# Convert each page to an image file in the specified directory
-
-# Make sure "assets/images" directory exists before running this script
-
+# Extract all pages to a folder as image files
+# Ensure the directory "assets/images" exists before executing the code
 pdf.RasterizeToImageFiles("assets/images/*.png", DPI=96)
 ```
 
@@ -55,16 +51,11 @@ For instance, consider rendering a web page from Amazon into a PDF, then saving 
 ```python
 from ironpdf import ChromePdfRenderer
 
-# Create an instance of the PDF renderer
-
+# Instantiate the PDF renderer
 renderer = ChromePdfRenderer()
-
-# Generate a PDF from a webpage
-
+# Create a PDF from a URL or local file path
 pdf = renderer.RenderUrlAsPdf("https://www.amazon.com/?tag=hp2-brobookmark-us-20")
-
-# Save each page of the PDF as an image in the specified folder
-
+# Extract all pages to a folder as image files
 pdf.RasterizeToImageFiles("assets/images/*.png", DPI=96)
 ```
 
@@ -78,8 +69,14 @@ pdf.RasterizeToImageFiles("assets/images/*.png", DPI=96)
 To customize the image sizes:
 
 ```python
-# Customize the dimensions and DPI for the generated images
+from ironpdf import *
 
+# The guide renders a PDF before this snippet; render one here so the
+# example runs on its own.
+renderer = ChromePdfRenderer()
+pdf = renderer.RenderUrlAsPdf("https://ironpdf.com")
+
+# Generate images with specified maximum dimensions and DPI
 pdf.RasterizeToImageFiles("assets/images/*.png", ImageMaxWidth=500, ImageMaxHeight=500, DPI=200)
 ```
 
