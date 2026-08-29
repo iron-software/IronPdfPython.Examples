@@ -180,4 +180,4 @@ pdf.SecuritySettings.AllowUserCopyPasteContent = False
 pdf.SaveAs("protected.pdf")
 ```
 
-*[Download the software product.](https://ironpdf.com/downloads/python-create-pdf.zip?utm_source=github)*
+*[Download the software product.](https://ironpdf.com/?utm_source=github#download-modal)*

@@ -143,8 +143,8 @@ Dive deeper into IronPDF's functionalities:
 
 - Experiment with [customizing PDF settings](https://ironpdf.com/python/examples/pdf-generation-settings/?utm_source=github).
 - Add [personalized headers and footers](https://ironpdf.com/python/examples/html-headers-and-footers/?utm_source=github), adjust margins ([IronPDF custom margins](https://ironpdf.com/python/examples/ironpdf-set-custom-margins/?utm_source=github)) and set custom page dimensions ([custom paper sizes](https://ironpdf.com/python/examples/custom-pdf-paper-size/?utm_source=github)).
-- Additional features like [watermarking](https://ironpdf.com/python/examples/pdf-watermarking/?utm_source=github), text extraction ([extract PDF text](https://ironpdf.com/python/examples/extract-pdf-text/?utm_source=github)), file size optimization ([PDF compression](https://ironpdf.com/python/examples/pdf-compression/?utm_source=github)), and direct printing ([print PDFs with Python](https://ironpdf.com/how-to/python-print-pdf/?utm_source=github)).
+- Additional features like [watermarking](https://ironpdf.com/python/examples/pdf-watermarking/?utm_source=github), text extraction ([extract PDF text](https://ironpdf.com/python/examples/extract-pdf-text/?utm_source=github)), file size optimization ([PDF compression](https://ironpdf.com/python/examples/pdf-compression/?utm_source=github)), and direct printing ([print PDFs with Python](https://ironpdf.com/python/how-to/python-print-pdf/?utm_source=github)).
 
-*You can [download IronPDF here](https://ironpdf.com/downloads/python-extract-text-from-pdf.zip?utm_source=github).*
+*You can [download IronPDF here](https://ironpdf.com/?utm_source=github#download-modal).*
 
 Explore these resources to use the full potential of PDF generation and manipulation with IronPDF.

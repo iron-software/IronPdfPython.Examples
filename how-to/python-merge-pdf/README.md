@@ -149,4 +149,4 @@ IronPDF offers reliable performance and precision in manipulating PDF documents.
 
 For deeper insights into using IronPDF, visit the expansive [Code Examples](https://ironpdf.com/python/examples/using-html-to-create-a-pdf/?utm_source=github). IronPDF is free for development, with various licensing options available for commercial use. For more details on licensing, refer to this [link](https://ironpdf.com/python/licensing/?utm_source=github).
 
-*[Download the software product here.](https://ironpdf.com/downloads/python-merge-pdf.zip?utm_source=github)*
+*[Download the software product here.](https://ironpdf.com/?utm_source=github#download-modal)*

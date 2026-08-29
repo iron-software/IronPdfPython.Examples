@@ -95,7 +95,7 @@ Logger.LoggingMode = Logger.LoggingModes.All
 
 ## Licensing & Support Options
 
-Secure a license for production use [here](https://ironpdf.com/python/licensing/?utm_source=github). For evaluating, acquire a 30-day trial license [here](https://ironpdf.com/python/trial-license?utm_source=github).
+Secure a license for production use [here](https://ironpdf.com/python/licensing/?utm_source=github). For evaluating, acquire a 30-day trial license [here](https://ironpdf.com/python/?utm_source=github#trial-license).
 
 Explore more code samples, tutorials, and detailed documentation at [IronPDF for Python](https://ironpdf.com/python/?utm_source=github).
 

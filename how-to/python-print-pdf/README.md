@@ -117,4 +117,4 @@ IronPDF prints PDFs from Python projects. Offering a broad range of features and
 
 Utilize IronPDF's free trial in a real-world setting. The [pricing](https://ironpdf.com/python/licensing/?utm_source=github) starts from `$liteLicense`. Try the [trial license](https://ironpdf.com?utm_source=github#trial-license) to explore how IronPDF can enhance your PDF printing workflow efficiently.
 
-*[Download](https://ironpdf.com/downloads/python-print-pdf.zip?utm_source=github) the software product.*
+*[Download](https://ironpdf.com/?utm_source=github#download-modal) the software product.*

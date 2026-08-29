@@ -7,7 +7,7 @@
 
 Incorporating a license key for IronPDF enables the live deployment of your project without any limitations or watermark intrusion.
 
-You can [purchase a license key here](https://ironpdf.com/python/licensing/?utm_source=github) or sign up for a [free 30-day trial key](https://ironpdf.com/trial-license?utm_source=github).
+You can [purchase a license key here](https://ironpdf.com/python/licensing/?utm_source=github) or sign up for a [free 30-day trial key](https://ironpdf.com/?utm_source=github#trial-license).
 
 ## Step 1: Include IronPDF in Your Python Project as a Dependency
 
@@ -69,7 +69,7 @@ We strongly recommend consulting our extensive tutorial on [How to Get Started w
 
 ## Assistance or Further Inquiries
 
-While in development, `IronPDF for Python` may be tested with the presence of the IronPDF watermark. However, for watermark-free live applications, a license must be acquired. Learn more about [acquiring a trial license](https://ironpdf.com/trial-license?utm_source=github) for testing purposes.
+While in development, `IronPDF for Python` may be tested with the presence of the IronPDF watermark. However, for watermark-free live applications, a license must be acquired. Learn more about [acquiring a trial license](https://ironpdf.com/?utm_source=github#trial-license) for testing purposes.
 
 For additional resources such as coding examples, tutorials, detailed licensing information, and comprehensive documentation, please visit the [IronPDF for Python](https://ironpdf.com/python/?utm_source=github) section on our site.
 
